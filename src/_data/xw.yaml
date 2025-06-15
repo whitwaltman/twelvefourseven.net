@@ -1,0 +1,17 @@
+- crossword: https://www.nytimes.com/crosswords/game/daily/2025/06/15
+  constructors:
+    - Adam Wagner
+    - Rebecca Goldstein
+  published: 2025/06/15
+  themed?: true
+  revealer: INSIDE OUT AND BACKWARDS
+  theme_set:
+    - clue: Device used to clear out nasal passages / Final part of a radio countdown
+      answer: NETIPOT
+      grid: I is circled
+    - clue: Brunch entrees / Figure with an eponymous fire
+      answer: OMELETS
+      grid: E is circled
+    - clue: Genetic repositories / Reel Big Fish or Sublime
+      answer: DNABANKS
+      grid: N is circled
