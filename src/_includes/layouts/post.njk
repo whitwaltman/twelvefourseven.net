@@ -1,0 +1,14 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+    <article>
+        <h1>{{ title }}</h1>
+        {{ content | safe }}
+    </article>
+    <section>
+        <h3>You might also like:</h3>
+        <ul>
+            <li>This is a dummy bullet point</li>
+            <li>These would have links if I wasn't faking it</li>
+        </ul>
+    </section>
+{% endblock %}

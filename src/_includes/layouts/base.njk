@@ -21,15 +21,12 @@
     <link rel="stylesheet" type="text/css" href="{{relative_path}}/css/base.css">
 </head>
 <body>
-    <header><p><a href="/">twelvefourseven.net</a></p></header>
+    {% include "partials/header.njk" %}
     <main>
-        {{ content | safe }}
+        {% block content %}
+            {{ content | safe }}
+        {% endblock %}
     </main>
-    <footer>
-        <p>
-            <q>I am the infrastructure of the web. I am not content, nor am I a product. I am a human and a participant in this great work of humanity we call the internet.</q>
-            <a href="https://thoughts.melonking.net/thoughts/every-site-needs-a-links-page-why-linking-matters">(Every site needs a Links Page)</a>
-        </p>
-    </footer>
+    {% include "partials/footer.njk" %}
 </body>
 </html>
