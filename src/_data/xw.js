@@ -1,4 +1,4 @@
-export default () => {
+module.exports = () => {
   return [
     {
       link: 'https://www.nytimes.com/crosswords/game/daily/2025/06/15',
