@@ -1,4 +1,3 @@
 {
-    "layout": "layouts/page.njk",
-    "relative_path": "../.."
+    "layout": "layouts/page.njk"
 }
