@@ -9,9 +9,30 @@ export default async function (config) {
     // config.on('eleventy.before', async ({ dir }) => {
     //     await fsp.rm(dir.output, { recursive: true, force: true });
     // });
-    config.setTemplateFormats("html,css,md,njk");
-    config.addPassthroughCopy('./src/assets/');
 
+    config.on('eleventy.before', async () => {
+        const tailwindInputPath = path.resolve('./src/css/main.css');
+        const tailwindOutputPath = './_site/css/main.css';
+        const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
+
+        const outputDir = path.dirname(tailwindOutputPath);
+        if (!fs.existsSync(outputDir)) {
+            fs.mkdirSync(outputDir, { recursive: true });
+        }
+
+        const result = await processor.process(cssContent, {
+            from: tailwindInputPath,
+            to: tailwindOutputPath,
+        });
+
+        fs.writeFileSync(tailwindOutputPath, result.css);
+    });
+
+    const processor = postcss([
+        tailwindcss(),
+    ]);
+
+    config.addPassthroughCopy('./src/assets/');
     config.addCollection('blogPosts', function (collectionAPI) {
         return collectionAPI.getFilteredByGlob('./src/posts/blog/*.md');
     });
