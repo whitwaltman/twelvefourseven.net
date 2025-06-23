@@ -1,0 +1,33 @@
+const then = new Date(2025, 7, 4, 17, 27);
+const now = new Date();
+const diff = then - now;
+
+const c = {
+    "ms_to_sec": 1000,
+    "sec_to_min": 60,
+    "min_to_hr": 60,
+    "hr_to_day": 24
+};
+
+if (diff >= 0) {
+    document.getElementById("now_d").innerText = now.toDateString();
+    document.getElementById("now_t").innerText = now.toLocaleTimeString("en-US", {
+        hour12: true,
+        hour: '2-digit',
+        minute: '2-digit'
+    });
+
+    const d = diff / (c["ms_to_sec"] * c["sec_to_min"] * c["min_to_hr"] * c["hr_to_day"]);
+    document.getElementById("d").innerText = Math.floor(d);
+    document.getElementById("d_units").innerText = Math.floor(d) === 1 ? "day" : "days";
+
+    const h = (d - Math.floor(d)) * c["hr_to_day"];
+    document.getElementById("h").innerText = Math.floor(h);
+    document.getElementById("h_units").innerText = Math.floor(h) === 1 ? "hour" : "hours";
+
+    const m = (h - Math.floor(h)) * c["min_to_hr"];
+    document.getElementById("m").innerText = Math.ceil(m);
+    document.getElementById("m_units").innerText = Math.ceil(m) === 1 ? "minute" : "minutes";
+} else {
+    document.getElementById("countdown").innerText = "This used to display a countdown for the number of days until I visited Pittsburgh again. The countdown has ended.";
+}
