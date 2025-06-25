@@ -1,4 +1,4 @@
-// const fsp = require('fs/promises');
+// import fsp from 'fs/promises';
 import fs from 'fs';
 import path from 'path';
 import postcss from 'postcss';
@@ -13,24 +13,36 @@ export default async function (config) {
     config.on('eleventy.before', async () => {
         const tailwindInputPath = path.resolve('./src/css/main.css');
         const tailwindOutputPath = './_site/css/main.css';
-        const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
+        // const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
 
         const outputDir = path.dirname(tailwindOutputPath);
         if (!fs.existsSync(outputDir)) {
             fs.mkdirSync(outputDir, { recursive: true });
         }
 
-        const result = await processor.process(cssContent, {
-            from: tailwindInputPath,
-            to: tailwindOutputPath,
+        fs.readFile(tailwindInputPath, (err, css) => {
+            postcss([
+                tailwindcss(),
+            ])
+            .process(css, { from: tailwindInputPath, to: tailwindOutputPath })
+            .then(result => {
+                fs.writeFile(tailwindOutputPath, result.css, () => true)
+            });
         });
 
-        fs.writeFileSync(tailwindOutputPath, result.css);
+        // const result = await processor.process(cssContent, {
+        //     from: tailwindInputPath,
+        //     to: tailwindOutputPath,
+        // });
+
+        // fs.writeFileSync(tailwindOutputPath, result.css);
+        // https://robmc.dev/blog/add-css-to-your-eleventy-site/
+        config.addWatchTarget('./src/css/main.css');
     });
 
-    const processor = postcss([
-        tailwindcss(),
-    ]);
+    // const processor = postcss([
+    //     tailwindcss(),
+    // ]);
 
     config.addPassthroughCopy('./src/assets/');
     config.addCollection('blogPosts', function (collectionAPI) {

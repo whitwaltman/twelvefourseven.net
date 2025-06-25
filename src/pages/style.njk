@@ -1,0 +1,92 @@
+---
+layout: layouts/base.njk
+permalink: style/index.html
+---
+<header>
+    <h1>Style doc</h1>
+    <p>
+        This is a style doc used to help me declare some basic CSS for commonly-used generic HTML elements.
+        I like using, and want to use, semantic HTML, but Tailwind strips away nearly all semantic styling components.
+        In particular, I'm thinking about heading elements (h1-h6). In doing this, I hope to create a more consistent
+        visual style and avoid the inclusion of unneccessarily long strings of utility classes in basic HTML elements.
+    </p>
+</header>
+
+<h1>This is an h1 element</h1>
+<h2>This is an h2 element</h2>
+<h3>This is an h3 element</h3>
+<h4>This is an h4 element</h4>
+<h5>This is an h5 element</h5>
+<h6>This is an h6 element</h6>
+
+<section>
+    <h2>This is a new section</h2>
+    <p>
+        I'm not sure yet if I want to do anything to make this visually distinct or not.
+        For now, I'm just going to include some bullet points about semantic HTML stuff.
+    </p>
+    <ul>
+        <li>
+            <a href="https://web.dev/learn/html/semantic-html">This</a> is one of the web pages I looked at to guide my understanding of semantic HTML
+            <li>
+                It's a pretty short doc, to be honest. It's from Google's <a href="https://web.dev">web.dev</a> site
+            </li>
+            <li>
+                I think it was somewhat helpful, but it definitely wasn't comprehensive enough for what I'm looking for
+            </li>
+        </li>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics">This</a> is another page I looked at
+            <li>
+                It's from the MDN Web Docs, which is one of my favorite resources
+            </li>
+            <li>
+                It's actually shorter than the last one, but it functions more as a starting point or a table of contents
+            </li>
+            <li>
+                What I really like is that they included a list of 14 of the roughly 100 semantic elements available. This is more on par with what I was looking for
+            </li>
+            <li>I'll include an ordered list (<code>ol</code>) of the ones they included <a href="#mdn-list">below</a></li>
+        </li>
+        <li>
+            I also created a supplemental list of semantic HTML elements that I considered providing default styling for that aren't included in the MDN list.
+            I did use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements#inline_text_semantics">this</a> MDN reference doc as a starting point
+            for selecting elements to include in <a href="#my-list">my list</a>, which can also be found below.
+        </li>
+    </ul>
+</section>
+<section id="mdn-list">
+    <h2>An incomplete list of semantic HTML elements, courtesy of MDN Web Docs</h2>
+    <ol>
+        <li>article</li>
+        <li>aside</li>
+        <li>details</li>
+        <li>figcaption</li>
+        <li>figure</li>
+        <li>footer</li>
+        <li>form</li>
+        <li>header</li>
+        <li>main</li>
+        <li>mark</li>
+        <li>nav</li>
+        <li>section</li>
+        <li>summary</li>
+        <li>time</li>
+    </ol>
+</section>
+<section id="my-list">
+    <h2>My list of semantic HTMl elements</h2>
+    <ol>
+        <li>
+            abbr
+            <p>represents an abbreviation or acronym</p>
+            <p><abbr>e.g.</abbr>, exempli gratia (for example)</p>
+        </li>
+        <li>
+            cite
+            <p>used to mark up the title of a creative work</p>
+            <p><cite>https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements#inline_text_semantics</cite></p>
+        </li>
+    </ol>
+    <p>test</p>
+</section>

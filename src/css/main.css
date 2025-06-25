@@ -4,4 +4,23 @@
     a {
         @apply underline;
     }
+
+    h1 {
+        font-size: 2.5rem;
+        color: red;
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: blue;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h1, h2, h3 {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
 }
