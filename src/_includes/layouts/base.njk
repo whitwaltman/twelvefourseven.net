@@ -1,32 +1,38 @@
+{% set pageTitle = metadata.title %}
+
+{% if title %}
+{% set pageTitle %}{{ title }} | {{ site.title }}{% endset %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>twelvefourseven.net</title>
-    <style>
-        img {
-            vertical-align: middle;
-            width: 200px;
-            height: auto;
-            object-fit: contain;
-        }
+    <meta name="generator" content="{{ site.generator }}">
+    <title>{{ pageTitle }}</title>
 
-        div.gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-    </style>
-    <link rel="stylesheet" type="text/css" href="{{relative_path}}/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link href="/assets/favicon.ico" rel="icon">
+
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ pageTitle }}">
+    <meta name="description" content="{{ description or site.description }}">
+
+    <script data-goatcounter="https://whitwaltman.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
-<body>
+
+<body class="bg-black text-white flex flex-col min-h-screen">
     {% include "partials/header.njk" %}
-    <main>
+    <main class="flex-1 px-8">
         {% block content %}
-            {{ content | safe }}
+        {{ content | safe }}
         {% endblock %}
     </main>
     {% include "partials/footer.njk" %}
 </body>
+
 </html>

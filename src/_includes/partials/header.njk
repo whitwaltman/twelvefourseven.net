@@ -1,3 +1,10 @@
-<header>
-    <p><a href="/">twelvefourseven.net</a></p>
+<header class="px-8 pt-6 pb-12 flex flex-col md:flex-row justify-between items-baseline">
+    <a class="text-4xl tracking-wide font-normal font-stretch-condensed text-lime-400 px-1 mb-2 hover:underline"
+        href="/index.html">twelvefourseven.net</a>
+    <nav class="text-lg font-mono font-semibold flex gap-2.5 mt-1 md:gap-4 lg:gap-6 xl:gap-8">
+        <a class="hover:text-red-400 px-1 {{ 'text-red-400' if section == 'blog' else '' }}" href="/blog">blog</a>
+        <a class="hover:text-indigo-400 px-1 {{ 'text-indigo-400' if section == 'links' else '' }}" href="/links">links</a>
+        <a class="hover:text-yellow-400 px-1 {{ 'text-yellow-400' if section == 'notes' else '' }}" href="/notes">notes</a>
+        <a class="hover:text-fuchsia-400 px-1 {{ 'text-fuchsia-400' if section == 'explore' else '' }}" href="/explore">explore</a>
+    </nav>
 </header>
