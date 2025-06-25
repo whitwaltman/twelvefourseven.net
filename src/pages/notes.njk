@@ -1,8 +1,10 @@
 ---
 title: notes
 ---
-<pre class="text-wrap">{{ page | dump }}</pre>
-<br>
-<hr>
-<br>
-<pre class="text-wrap">{{ eleventy | dump }}</pre>
+{% for note in collections.notes %}
+    <section class="mb-4">
+        <p>{{ note.content | safe }}</p>
+        <p>on {{ note.page.fileSlug | convertTimestamp }}</p>
+    </section>
+    <hr>
+{% endfor %}

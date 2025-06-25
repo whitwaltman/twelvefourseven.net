@@ -5,27 +5,10 @@ pagination:
     size: 10
     alias: posts
 ---
-{# This is my blog
-
-<br>
-<hr>
-<br>
-
-{{ section }}
-
-<br>
-<hr>
-<br>
-
-{{ page | dump }} #}
-
 {% for post in posts %}
     <section class="mb-4">
         <h3><a href="{{ post.url }}" class="underline font-semibold">{{ post.data.title }}</a></h3>
         <p>{{ post.page.excerpt }}</p>
-        <br>
-        <hr>
-        {{ post.page | dump }}
-        {# <p>{{ p.content | safe }}</p> #}
     </section>
+    <hr>
 {% endfor %}

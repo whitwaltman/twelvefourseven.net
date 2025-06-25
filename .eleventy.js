@@ -36,6 +36,9 @@ export default async function (config) {
     config.addCollection('blogPosts', function (collectionAPI) {
         return collectionAPI.getFilteredByGlob('./src/posts/blog/*.md');
     });
+    config.addCollection('notes', function (collectionAPI) {
+        return collectionAPI.getFilteredByGlob('./src/posts/notes/*.md');
+    })
 
     config.addFilter('convertTimestamp', function (timestamp) {
         const date = new Date(timestamp * 1000);
