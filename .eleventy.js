@@ -32,33 +32,6 @@ export default async function (config) {
     config.addCollection('blogPosts', function (collectionAPI) {
         return collectionAPI.getFilteredByGlob('./src/posts/blog/*.md');
     });
-
-    config.on('eleventy.after', async () => {
-        const outputDir = '_site';
-
-        async function processHTMLFiles(dir) {
-            const entries = await fsp.readdir(dir, { withFileTypes: true });
-
-            for (const entry of entries) {
-                const fullPath = path.join(dir, entry.name);
-
-                if (entry.isDirectory()) {
-                    await processHTMLFiles(fullPath);
-                } else if (entry.name.endsWith('.html')) {
-                    let content = await fsp.readFile(fullPath, 'utf-8');
-
-                    content = content.replace(/^\s*\n/gm, '');
-                    const formatted = await prettier.format(content, {
-                        parser: "html",
-                    });
-
-                    await fsp.writeFile(fullPath, formatted, 'utf-8');
-                }
-            }
-        }
-
-        await processHTMLFiles(outputDir);
-    });
     
     return {
         markdownTemplateEngine: 'njk',
