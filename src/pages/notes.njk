@@ -3,6 +3,9 @@ title: notes
 ---
 {% for note in collections.notes %}
     <section class="mb-4">
+        {% if note.data.title %}
+        <h3 class="text-lg font-medium mb-2"><a class="underline" href="{{ note.url }}">{{ note.data.title }}</a></h3>
+        {% endif %}
         <p>{{ note.content | safe }}</p>
         <p>on {{ note.page.fileSlug | convertTimestamp }}</p>
     </section>
