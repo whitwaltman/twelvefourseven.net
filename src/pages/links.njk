@@ -1,0 +1,17 @@
+---
+title: links
+---
+
+{% for link in links %}
+    <p>{{ link.title }}</p>
+    <ul>
+        <li>{{ link.url }}</li>
+        <li>added {{ link.created | convertTimestamp }}</li>
+    </ul>
+    <br>
+    {% for excerpt in link.excerpts %}
+        <blockquote>{{ excerpt }}</blockquote>
+    {% endfor %}
+    <br>
+    <aside>{{ comment }}</aside>
+{% endfor %}

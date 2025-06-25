@@ -28,9 +28,30 @@ export default async function (config) {
         tailwindcss(),
     ]);
 
+    config.setFrontMatterParsingOptions({
+        excerpt: true,
+    });
+
     config.addPassthroughCopy('./src/assets/');
     config.addCollection('blogPosts', function (collectionAPI) {
         return collectionAPI.getFilteredByGlob('./src/posts/blog/*.md');
+    });
+
+    config.addFilter('convertTimestamp', function (timestamp) {
+        const date = new Date(timestamp * 1000);
+        const options = {
+            weekday: "long",
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+        };
+        const day = date.toLocaleString('en-GB', options);
+        const time = date.toLocaleTimeString('en-US', {
+            hour12: false,
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+        return `${day} at ${time}`
     });
     
     return {
