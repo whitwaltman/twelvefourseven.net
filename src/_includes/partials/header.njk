@@ -2,7 +2,7 @@
     <a class="text-4xl tracking-wide font-normal font-stretch-condensed text-lime-400 px-1 mb-2 hover:underline"
         href="/">twelvefourseven.net</a>
     <nav class="text-lg font-mono font-semibold flex gap-2.5 mt-1 md:gap-4 lg:gap-6 xl:gap-8">
-        <a class="hover:text-red-400 px-1" href="/blog">blog</a>
+        <a class="hover:text-red-400 px-1 {{ 'underline text-red-400' if section == 'blog' else '' }}" href="/blog">blog</a>
         <a class="hover:text-indigo-400 px-1" href="/links">links</a>
         <a class="hover:text-yellow-400 px-1" href="/notes">notes</a>
         <a class="hover:text-fuchsia-400 px-1" href="/explore">explore</a>

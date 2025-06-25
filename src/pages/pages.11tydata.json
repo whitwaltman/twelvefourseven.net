@@ -1,4 +1,0 @@
-{
-    "layout": "layouts/page.njk",
-    "permalink": "{{ page.filePathStem | replace('/pages/', '/') }}/index.html"
-}
