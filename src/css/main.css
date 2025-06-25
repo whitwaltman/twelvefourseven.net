@@ -23,4 +23,20 @@
         margin-top: 1em;
         margin-bottom: 0.5em;
     }
+
+    ul {
+        @apply list-disc list-outside pl-6;
+    }
+
+    ol {
+        @apply list-decimal list-outside pl-8;
+    }
+
+    li {
+        @apply pl-1.5 pb-0.5;
+    }
+
+    p {
+        @apply pb-1;
+    }
 }
