@@ -56,6 +56,11 @@ export default async function (config) {
         });
         return `${day} at ${time}`
     });
+
+    config.addFilter('formatBuildDate', function (date) {
+        return date.toISOString();
+        // return `${date.toDateString()} ${date.toLocaleTimeString()}`;
+    })
     
     return {
         markdownTemplateEngine: 'njk',
