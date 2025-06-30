@@ -2,6 +2,6 @@ module.exports = {
     title: "twelvefourseven.net",
     url: "https://twelvefourseven.net",
     language: "en",
-    description: "the internet home of whit waltman",
+    description: "Katie Lin is a software designer and engineer. This is their weblog.",
     buildTime: new Date(),
 }
