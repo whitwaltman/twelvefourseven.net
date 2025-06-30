@@ -7,7 +7,7 @@
     "build:clean": "rm -rf _site && npx eleventy",
     "debug": "DEBUG=* npx eleventy",
     "format": "node scripts/format-html.js",
-    "start": "npx eleventy --serve --incremental"
+    "start": "npx eleventy --serve --input=./src --output=_dev"
   },
   "keywords": [],
   "author": "",
