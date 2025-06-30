@@ -10,12 +10,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="{{ site.generator }}">
-    <title>{{ pageTitle }}</title>
+    <meta name="generator" content="{{ eleventy.generator }}">
+    {% if production %}
+        <title>{{ pageTitle }}</title>
+        <link href="/assets/favicon.ico" rel="icon">
+    {% else %}
+        <title>DEV - {{ pageTitle }}</title>
+        <link href="/assets/favicon-dev.ico" rel="icon">
+    {% endif %}
 
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-    <link href="/assets/favicon.ico" rel="icon">
 
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
