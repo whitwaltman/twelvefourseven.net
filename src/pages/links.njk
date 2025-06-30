@@ -3,15 +3,12 @@ title: links
 ---
 
 {% for link in links %}
-    <p>{{ link.title }}</p>
-    <ul>
-        <li>{{ link.url }}</li>
-        <li>added {{ link.created | convertTimestamp }}</li>
-    </ul>
-    <br>
-    {% for excerpt in link.excerpts %}
-        <blockquote>{{ excerpt }}</blockquote>
-    {% endfor %}
-    <br>
-    <aside>{{ comment }}</aside>
+    <section class="mb-4">
+        <p class="text-sm text-gray-400 float-right">{{ link.created | convertTimestamp }}</p>
+        <p class="mb-2"><a class="underline text-blue-300 hover:text-blue-500" href="{{ link.url }}">{{ link.title }}</a></p>
+        {% for excerpt in link.excerpts %}
+            <blockquote class="bg-gray-600 mb-2 p-1">{{ excerpt }}</blockquote>
+        {% endfor %}
+        <aside class="italic">{{ link.comment }}</aside>
+    </section>
 {% endfor %}

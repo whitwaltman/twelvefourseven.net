@@ -43,7 +43,7 @@ export default async function (config) {
     config.addFilter('convertTimestamp', function (timestamp) {
         const date = new Date(timestamp * 1000);
         const options = {
-            weekday: "long",
+            weekday: "short",
             year: "numeric",
             month: "short",
             day: "numeric",

@@ -6,8 +6,8 @@
     "build": "npx eleventy",
     "build:clean": "rm -rf _site && npx eleventy",
     "debug": "DEBUG=* npx eleventy",
-    "format": "node scripts/format-html.js",
-    "start": "npx eleventy --serve --input=./src --output=_dev"
+    "format": "rm _site/assets/favicon-dev.ico && node scripts/format-html.js",
+    "start": "npx eleventy --serve --incremental"
   },
   "keywords": [],
   "author": "",
