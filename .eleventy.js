@@ -34,11 +34,8 @@ export default async function (config) {
 
     config.addPassthroughCopy('./src/assets/');
     config.addCollection('blogPosts', function (collectionAPI) {
-        return collectionAPI.getFilteredByGlob('./src/posts/blog/*.md');
+        return collectionAPI.getFilteredByGlob('./src/posts/*.md');
     });
-    config.addCollection('notes', function (collectionAPI) {
-        return collectionAPI.getFilteredByGlob('./src/posts/notes/*.md');
-    })
 
     config.addFilter('convertTimestamp', function (timestamp) {
         const date = new Date(timestamp * 1000);
@@ -60,7 +57,7 @@ export default async function (config) {
     config.addFilter('formatBuildDate', function (date) {
         return date.toISOString();
         // return `${date.toDateString()} ${date.toLocaleTimeString()}`;
-    })
+    });
     
     return {
         markdownTemplateEngine: 'njk',

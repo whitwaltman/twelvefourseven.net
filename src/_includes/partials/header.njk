@@ -1,9 +1,18 @@
 <header class="px-8 pt-6 pb-12 flex flex-col justify-between items-baseline">
     <a class="text-4xl tracking-wide font-normal font-stretch-condensed text-lime-400 px-1 mb-2 hover:underline"
         href="/">twelvefourseven.net</a>
-    <nav class="text-lg font-mono font-semibold flex gap-2.75 mt-1">
-        <a class="hover:text-orange-400 px-1 {{ 'text-orange-400' if section == 'words' else '' }}" href="/words">words</a>
-        <a class="hover:text-indigo-400 px-1 {{ 'text-indigo-400' if section == 'links' else '' }}" href="/links">links</a>
-        <a class="hover:text-fuchsia-400 px-1 {{ 'text-fuchsia-400' if section == 'explore' else '' }}" href="/explore">explore</a>
-    </nav>
+    <aside class="info">
+        <details>
+            <summary class="mb-8"></summary>
+            <section>
+                <h2 class="text-lg font-semibold text-gray-400">what is this</h2>
+                <p>{{ site.title }} is whatever the hell i want it to be</p>
+            </section>
+            <br>
+            <section>
+                <h2 class="text-lg font-semibold text-gray-400">anything else?</h2>
+                <span>last build: {{ site.buildTime | formatBuildDate }}</span>
+            </section>
+        </details>
+    </aside>
 </header>
