@@ -1,4 +1,10 @@
 ---
 title: explore
 ---
-<a class="text-2xl font-medium underline" href="/countdown/">countdown</a>
+<div class="">
+    {% for page in site.explore %}
+        <div class="">
+            <a class="" href="/{{ page }}">{{ page }}</a>
+        </div>
+    {% endfor %}
+</div>

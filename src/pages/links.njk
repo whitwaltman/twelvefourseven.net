@@ -4,11 +4,10 @@ description: links
 ---
 
 {% for link in links %}
-    <details class="rounded-lg border border-transparent p-2 mb-2 open:border-gray-700/50 open:bg-gray-950/50">
-        <summary class="mb-2"><a class="underline text-blue-300 hover:text-blue-500" href="{{ link.url }}">{{ link.title }}</a></summary>
-        <div>
-            <p class="italic pl-8">{{ link.comment }}</p>
-            <p class="text-sm text-gray-400 float-right">{{ link.created | convertTimestamp }}</p>
+    <div class="mb-4">
+        <div class="flex flex-col sm:flex-row justify-between">
+            <a class="underline text-blue-400 hover:text-blue-600" target="_blank" rel="noopener noreferrer" href="{{ link.url }}">{{ link.title }} <span>&nearrow;</span></a>
+            <span class="text-sm text-gray-400">{{ link.created | convertTimestamp }}</span>
         </div>
-    </details> 
+    </div>
 {% endfor %}
