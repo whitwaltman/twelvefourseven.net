@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     title: "twelvefourseven.net",
     url: "https://twelvefourseven.net",
     language: "en",
