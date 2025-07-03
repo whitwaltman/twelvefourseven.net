@@ -2,3 +2,8 @@
 layout: layouts/base.njk
 permalink: index.html
 ---
+{% for post in collections.new %}
+<h1>{{ post.data.title }}</h1>
+{{ post.date }}
+{{ post.templateContent | safe }}
+{% endfor %}

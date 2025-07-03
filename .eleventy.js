@@ -33,9 +33,14 @@ export default async function (config) {
     });
 
     config.addPassthroughCopy('./src/assets/');
-    config.addCollection('blogPosts', function (collectionAPI) {
-        return collectionAPI.getFilteredByGlob('./src/posts/*.md');
+
+    config.addCollection('posts', function (collection) {
+        return collection.getFilteredByGlob('./src/posts/*.md');
     });
+
+    config.addCollection('new', function (collection) {
+        return collection.getFilteredByGlob('./src/posts/*.md').slice(1);
+    })
 
     config.addFilter('convertTimestamp', function (timestamp) {
         const date = new Date(timestamp * 1000);

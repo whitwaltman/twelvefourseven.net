@@ -1,0 +1,8 @@
+---
+title: archive
+---
+{% for post in collections.posts %}
+<ul>
+    <li><a class="underline" href="{{ post.url }}">{{ post.data.title }}</a></li>
+</ul>
+{% endfor %}
