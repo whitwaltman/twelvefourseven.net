@@ -1,12 +1,12 @@
 ---
 title: archive
 ---
-<p>all my posts</p>
+<p class="text-gray-500 text-sm italic">Sorry this is mostly empty right now. Check back soon for more.</p>
 {% for post in collections.posts | reverse %}
 <ul>
-    <li>
-        <a class="underline" href="{{ post.url }}">{{ post.data.title }}</a>
-        <p>{{ post.data.dateSlug.slice(0,-1) }}</p>
+    <li class="flex flex-row justify-between mb-4">
+        <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
+        <span class="text-sm text-gray-400 font-normal">{{ post.data.dateSlug.slice(0,-1) }}</span>
     </li>
 </ul>
 {% endfor %}

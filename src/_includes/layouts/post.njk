@@ -1,6 +1,8 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
-    <h1 class="text-3xl text-gray-400 font-medium mb-2">{{ title }}</h1>
-    <p class="text-sm text-gray-600 font-normal mb-8">{{ page.date | formatPostDate }} <a class="post-link" href="{{ page.url }}">Link to this post</a></p>
-    {{ content | safe}}
+    <article class="mb-20">
+        <h1 class="text-3xl text-gray-400 font-medium mb-2">{{ title }}</h1>
+        <p class="text-sm text-gray-600 font-normal mb-8">{{ page.date | formatPostDate }} <a class="post-link" href="{{ page.url }}">Link to this post</a></p>
+        {{ content | safe}}
+    </article>
 {% endblock %}

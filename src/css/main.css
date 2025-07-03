@@ -16,4 +16,8 @@
     a.post-link {
         @apply underline hover:bg-lime-100;
     }
+
+    a.footer-link {
+        @apply underline hover:bg-blue-100;
+    }
 }

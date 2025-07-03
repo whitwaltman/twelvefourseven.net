@@ -8,4 +8,7 @@ section: home
 <p class="text-sm text-gray-600 font-normal mb-8">{{ post.date | formatPostDate }} <a class="post-link" href="{{ post.url }}">Link to this post</a></p>
 {{ post.templateContent | safe }}
 {% endfor %}
-<p>Looking for more? Try <a class="underline" href="/archive">the archive</a></p>
+<div class="text-gray-400 mt-12 mb-8">
+    <hr class="mb-4">
+    <p>Looking for more? Try <a class="underline hover:bg-lime-200" href="/archive">the archive</a></p>
+</div>
