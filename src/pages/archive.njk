@@ -1,8 +1,12 @@
 ---
 title: archive
 ---
-{% for post in collections.posts %}
+<p>all my posts</p>
+{% for post in collections.posts | reverse %}
 <ul>
-    <li><a class="underline" href="{{ post.url }}">{{ post.data.title }}</a></li>
+    <li>
+        <a class="underline" href="{{ post.url }}">{{ post.data.title }}</a>
+        <p>{{ post.data.dateSlug.slice(0,-1) }}</p>
+    </li>
 </ul>
 {% endfor %}

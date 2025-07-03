@@ -1,9 +1,11 @@
 ---
 layout: layouts/base.njk
 permalink: index.html
+section: home
 ---
 {% for post in collections.new %}
-<h1>{{ post.data.title }}</h1>
-{{ post.date }}
+<h1 class="text-3xl text-gray-400 font-medium mb-2">{{ post.data.title }}</h1>
+<p class="text-sm text-gray-600 font-normal mb-8">{{ post.date | formatPostDate }} <a class="post-link" href="{{ post.url }}">Link to this post</a></p>
 {{ post.templateContent | safe }}
 {% endfor %}
+<p>Looking for more? Try <a class="underline" href="/archive">the archive</a></p>

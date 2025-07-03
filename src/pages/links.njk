@@ -5,7 +5,7 @@ description: A bunch of links I like. Explore the vast, independent web!
 {% for link in links %}
     <div class="mb-4">
         <div class="flex flex-col sm:flex-row justify-between">
-            <a class="underline text-blue-400 hover:text-blue-600" target="_blank" rel="noopener noreferrer" href="{{ link.url }}">{{ link.title }} <span>&nearrow;</span></a>
+            <div><a class="ext-link" target="_blank" rel="noopener noreferrer" href="{{ link.url }}">{{ link.title }}</a></div>
             <span class="text-sm text-gray-400">{{ link.created | convertTimestamp }}</span>
         </div>
     </div>

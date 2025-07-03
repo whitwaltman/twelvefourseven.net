@@ -39,7 +39,7 @@ export default async function (config) {
     });
 
     config.addCollection('new', function (collection) {
-        return collection.getFilteredByGlob('./src/posts/*.md').slice(1);
+        return collection.getFilteredByGlob('./src/posts/*.md').slice(0,1);
     })
 
     config.addFilter('convertTimestamp', function (timestamp) {
@@ -62,6 +62,23 @@ export default async function (config) {
     config.addFilter('formatBuildDate', function (date) {
         return date.toISOString();
         // return `${date.toDateString()} ${date.toLocaleTimeString()}`;
+    });
+
+    config.addFilter('formatPostDate', function (created) {
+        const date = new Date(created);
+        const options = {
+            weekday: "short",
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+        };
+        const day = date.toLocaleString('en-GB', options);
+        const time = date.toLocaleTimeString('en-US', {
+            hour12: false,
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+        return `${time}, ${day.slice(0,3)} ${day.slice(4)}`;
     });
     
     return {

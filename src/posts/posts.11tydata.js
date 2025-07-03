@@ -1,5 +1,6 @@
 export default {
     layout: "layouts/post.njk",
+    section: "blog",
     eleventyComputed: {
         dateSlug: function (data) {
             const date = new Date(data.page.date);
