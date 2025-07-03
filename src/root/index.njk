@@ -1,14 +1,14 @@
 ---
 layout: layouts/base.njk
 permalink: index.html
+section: home
 ---
-<section>
-    <p class="mb-8">
-        Katie Lin is a software designer and engineer. They enjoy kayaking and playing bass guitar.
-        You can write to them here:
-        <code class="px-1 py-0.5 text-sm border-1 border-gray-400 border-solid">
-        c.lin (at) mailbox.org</code>
-    </p>
-    <br><br>
-</section>
-<hr class="mb-8">
+{% for post in collections.new %}
+<h1 class="text-3xl text-gray-400 font-medium mb-2">{{ post.data.title }}</h1>
+<p class="text-sm text-gray-600 font-normal mb-8">{{ post.date | formatPostDate }} <a class="post-link" href="{{ post.url }}">Link to this post</a></p>
+{{ post.templateContent | safe }}
+{% endfor %}
+<div class="text-gray-400 mt-12 mb-8">
+    <hr class="mb-4">
+    <p>Looking for more? Try <a class="underline hover:bg-lime-200" href="/archive">the archive</a></p>
+</div>

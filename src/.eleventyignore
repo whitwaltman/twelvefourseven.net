@@ -1,7 +1,1 @@
-posts/drafts/
-
-pages/blog.njk
-pages/notes.njk
-
-posts/blog/
-posts/notes/
+root/404.njk

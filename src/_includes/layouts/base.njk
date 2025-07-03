@@ -5,7 +5,7 @@
 {% endif %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.language }}">
 
 <head>
     <meta charset="UTF-8">
@@ -28,7 +28,7 @@
     <meta name="description" content="{{ description or site.description }}">
 </head>
 
-<body class="bg-black text-white flex flex-col min-h-screen">
+<body class="bg-white text-black flex flex-col min-h-screen">
     {% include "partials/header.njk" %}
     <main class="flex-1 px-8">
         {% block content %}

@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@layer base {
+    main p {
+        margin-bottom: 16px;
+    }
+
+    a.ext-link {
+        @apply underline text-blue-400 hover:text-blue-600;
+    }
+
+    a.ext-link::after {
+        content: " \2197";
+    }
+
+    a.post-link {
+        @apply underline hover:bg-lime-100;
+    }
+
+    a.footer-link {
+        @apply underline hover:bg-blue-100;
+    }
+}
