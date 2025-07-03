@@ -1,6 +1,6 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
-    <h1 class="text-3xl text-gray-400 font-medium mb-2">{{ title }}</h1>
-    <p class="text-sm text-gray-700 font-normal mb-8">{{ date }}</p>
+    <h1 class="text-3xl text-gray-400 font-medium mb-2"><a class="hover:underline" href="{{ page.url }}">{{ title }}</a></h1>
+    <p class="text-sm text-gray-600 font-normal mb-8">{{ page.date }}</p>
     {{ content | safe}}
 {% endblock %}
