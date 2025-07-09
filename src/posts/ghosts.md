@@ -3,6 +3,7 @@ title: Ghosts in the registers
 ---
 
 Sometimes, when I've selected and copied a chunk of text and haven't pasted it yet, it feels like I've picked something up that I need to put down. It's a different sensation, though — a quiet ticking in the back of my mind. Every so often, I'm unable to recall what I picked up until I paste it somewhere, like tipping out a bag to see what's inside.
+---
 
 In Vim, I don't really *feel* the metaphorical weight of text I've yanked into a register. Perhaps it's because text manipulation is such a core aspect of the Vim way of thinking? Moving objects around inside the buffer is cheap, easy — it's like the text is always fluid, never etched in place. Or maybe I just never learned to use Vim idiomatically (for lack of a better term).
 

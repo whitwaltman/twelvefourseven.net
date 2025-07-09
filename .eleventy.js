@@ -2,8 +2,13 @@ import fs from 'fs';
 import path from 'path';
 import postcss from 'postcss';
 import tailwindcss from '@tailwindcss/postcss';
+import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 
 export default async function (config) {
+    config.addPlugin(eleventyImageTransformPlugin);
+    
+    config.addPassthroughCopy('./src/assets/');
+
     config.on('eleventy.before', async () => {
         const tailwindInputPath = path.resolve('./src/css/main.css');
         const tailwindOutputPath = './_site/css/main.css';
@@ -31,8 +36,6 @@ export default async function (config) {
     config.setFrontMatterParsingOptions({
         excerpt: true,
     });
-
-    config.addPassthroughCopy('./src/assets/');
 
     config.addCollection('posts', function (collection) {
         return collection.getFilteredByGlob('./src/posts/*.md');

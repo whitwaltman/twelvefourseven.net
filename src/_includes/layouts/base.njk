@@ -25,12 +25,12 @@
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:title" content="{{ pageTitle }}">
-    <meta name="description" content="{{ description or site.description }}">
+    <meta name="description" content="{{ description or page.excerpt or site.description }}">
 </head>
 
-<body class="bg-white text-black flex flex-col min-h-screen">
+<body class="bg-lime-400 text-black flex flex-col min-h-screen">
     {% include "partials/header.njk" %}
-    <main class="flex-1 px-8">
+    <main class="bg-white flex-1 px-4">
         {% block content %}
         {{ content | safe }}
         {% endblock %}
