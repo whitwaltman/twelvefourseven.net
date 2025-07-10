@@ -6,7 +6,7 @@
     }
 
     a.ext-link {
-        @apply underline text-blue-400 hover:text-blue-600;
+        @apply underline text-blue-500 hover:text-blue-700;
     }
 
     a.ext-link::after {

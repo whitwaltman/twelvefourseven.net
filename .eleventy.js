@@ -43,7 +43,12 @@ export default async function (config) {
 
     config.addCollection('new', function (collection) {
         return collection.getFilteredByGlob('./src/posts/*.md').slice(0,1);
-    })
+    });
+
+    config.addShortcode("extLink", function (url, text) {
+        return `<a class='ext-link' target='_blank' rel='noopener noreferrer' 
+            href='${url}'>${text}<span>&nearrow;</span></a>`;
+    });
 
     config.addFilter('convertTimestamp', function (timestamp) {
         const date = new Date(timestamp * 1000);
