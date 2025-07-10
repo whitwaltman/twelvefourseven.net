@@ -53,6 +53,10 @@ export default async function (config) {
             href='${url}'>${text}<span>&nearrow;</span></a>`;
     });
 
+    config.addShortcode("break", function() {
+        return `<hr class="my-4 w-1/3">`;
+    });
+
     config.addFilter('convertTimestamp', function (timestamp) {
         const date = new Date(timestamp * 1000);
         const options = {

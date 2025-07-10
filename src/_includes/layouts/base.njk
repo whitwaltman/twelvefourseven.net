@@ -30,7 +30,7 @@
 
 <body class="bg-lime-400 text-black flex flex-col min-h-screen">
     {% include "partials/header.njk" %}
-    <main class="bg-white flex-1 px-4">
+    <main class="bg-white flex-1 px-4 w-2/3">
         {% block content %}
         {{ content | safe }}
         {% endblock %}

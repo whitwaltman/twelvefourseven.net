@@ -3,15 +3,15 @@ title: Finding synonyms without the internet
 description: Exploring a command-line tool for word synonyms
 ---
 
-Like most programmers, I love puzzles. Some of the {% extLink "https://enigma.puzzlers.org/", "puzzles" %} I solve on a regular basis rely on a strong command of the English language. And while I am a native English speaker, synonyms have never been my strong suit. I don't mind using a quick internet search or even a specific site like {% extLink "https://www.powerthesaurus.org/", "Power Thesaurus" %}, but those solutions often interrupt my state of flow. Enter: {% extLink "https://github.com/words/moby", "Moby" %}.
+Like most programmers, I love puzzles. Some of the {% extLink "https://enigma.puzzlers.org/", "puzzles" %} I solve on a regular basis rely on a strong command of the English language. And while I am a native English speaker, synonyms have never been my strong suit. I don't mind using a quick internet search or even a specific site like Power Thesaurus, but those solutions often interrupt my state of flow. Enter: Moby.
 
-Moby is billed as the "largest English-language thesaurus" and offers a simple command-line interface that can search a local, cached copy from your terminal. For me, this is the ideal set-up, given that I'm already likely to have my terminal open. Let's see what happens if we query Moby for synonyms of the word "butter" (as in, *"I can't believe it's not butter!"*):
+{% extLink "https://github.com/words/moby", "Moby" %} is billed as the "largest English-language thesaurus" and offers a simple command-line interface that can search a local, cached copy from your terminal. For me, this is the ideal set-up, given that I'm already likely to have my terminal open. Let's see what happens if we query Moby for synonyms of the word "butter" (as in, *"I can't believe it's not butter!"*):
 
 ![a screenshot of the results from running the moby command-line tool](/assets/butter.png)
 
 That seems... less than ideal. A good deal of the synonyms are repeated in the "see also" section, which seems unnecessarily redundant. It makes a lot more sense in the context of the usage of the <a target="_blank" class="ext-link" href="https://moby-thesaurus.org/">Moby website<span class="text-xs">&nearrow;</span></a>, where you can tunnel down the rabbit hole of adjacent word associations, but it doesn't do me a whole lot of good in the terminal.
 
-* * *
+{% break %}
 
 First, let's start by cleaning up the output a little. We can use the `tr` command *translate* the comma delimiter to a newline character, which lets us print each result on its own line. Then, we can wield a little `awk` magic to trim the leading whitespace:
 
