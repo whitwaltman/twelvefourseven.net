@@ -42,7 +42,10 @@ export default async function (config) {
     });
 
     config.addCollection('new', function (collection) {
-        return collection.getFilteredByGlob('./src/posts/*.md').slice(0,1);
+        // https://www.11ty.dev/docs/collections-api/
+        return collection.getFilteredByGlob('./src/posts/*.md').sort(function (a, b) {
+            return b.date - a.date;
+        }).slice(0,1);
     });
 
     config.addShortcode("extLink", function (url, text) {
