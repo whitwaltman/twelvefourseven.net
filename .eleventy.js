@@ -53,8 +53,12 @@ export default async function (config) {
             href='${url}'>${text}<span>&nearrow;</span></a>`;
     });
 
-    config.addShortcode("break", function() {
+    config.addShortcode("break", function () {
         return `<hr class="my-4 w-1/3">`;
+    });
+
+    config.addFilter('truncate', function (text) {
+        return text.slice(0, 155) + "...";
     });
 
     config.addFilter('convertTimestamp', function (timestamp) {

@@ -1,7 +1,15 @@
 {% if title %}
-{% set pageTitle %}{{ title }} | {{ site.title }}{% endset %}
+    {% set pageTitle %}{{ title }}{% endset %}
 {% else %}
-{% set pageTitle %}{{ site.title }}{% endset %}
+    {% set pageTitle %}{{ site.title }}{% endset %}
+{% endif %}
+
+{% if page.excerpt %}
+    {% set pageDescription %}{{ page.excerpt | truncate }}{% endset %}
+{% elif page.description %}
+    {% set pageDescription %}{{ page.description }}{% endset %}
+{% else %}
+    {% set pageDescription %}{{ site.description }}{% endset %}
 {% endif %}
 
 <!DOCTYPE html>
@@ -25,12 +33,12 @@
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:title" content="{{ pageTitle }}">
-    <meta name="description" content="{{ description or page.excerpt or site.description }}">
+    <meta name="description" content="{{ pageDescription }}">
 </head>
 
 <body class="bg-lime-400 text-black flex flex-col min-h-screen">
     {% include "partials/header.njk" %}
-    <main class="bg-white flex-1 px-4 w-2/3">
+    <main class="bg-white flex-1 px-4">
         {% block content %}
         {{ content | safe }}
         {% endblock %}
