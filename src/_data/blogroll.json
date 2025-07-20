@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Interconnected, a blog by Matt Webb",
+        "url": "https://interconnected.org/home/",
+        "feed": "https://interconnected.org/home/feed"
+    },
+    {
+        "title": "Rex Parker Does the NYT Crossword Puzzle",
+        "url": "https://rexwordpuzzle.blogspot.com/",
+        "feed": "https://rexwordpuzzle.blogspot.com/feeds/posts/default"
+    },
+    {
+        "title": "Josh W. Comeau",
+        "url": "https://www.joshwcomeau.com/",
+        "feed": "https://www.joshwcomeau.com/rss.xml"
+    }
+]
