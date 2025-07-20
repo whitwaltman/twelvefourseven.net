@@ -3,7 +3,7 @@
 ## build and deploy
 1. `npm run build:clean`
 2. `npm run format`
-3. `./deploy.sh` (optional `--delete` flag available)
+3. `./scripts/deploy.sh` (optional `--delete` flag available)
 
 ## directory structure
 - all site content is located in /src
