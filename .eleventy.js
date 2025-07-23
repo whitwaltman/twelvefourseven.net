@@ -16,18 +16,22 @@ export default async function (config) {
         return collection.getFilteredByGlob('./posts/*.md');
     });
 
+    config.addCollection('ref', function (collection) {
+        return collection.getFilteredByGlob('./ref/*.md');
+    })
+
     config.addCollection('recent', function (collection) {
-        return collection.getFilteredByGlob('./src/posts/*.md').sort(function (a, b) {
+        return collection.getFilteredByGlob('./posts/*.md').sort(function (a, b) {
             return b.date - a.date;
         }).slice(0,12);
     })
 
-    config.addCollection('new', function (collection) {
-        // https://www.11ty.dev/docs/collections-api/
-        return collection.getFilteredByGlob('./src/posts/*.md').sort(function (a, b) {
-            return b.date - a.date;
-        }).slice(0,1);
-    });
+    // config.addCollection('new', function (collection) {
+    //     // https://www.11ty.dev/docs/collections-api/
+    //     return collection.getFilteredByGlob('./posts/*.md').sort(function (a, b) {
+    //         return b.date - a.date;
+    //     }).slice(0,1);
+    // });
 
     config.addShortcode("extLink", function (url, text) {
         return `<a class='ext-link' target='_blank' rel='noopener noreferrer' 

@@ -82,6 +82,7 @@ blockquote + p {
 ul.plain {
     list-style-type: none;
     padding-inline-start: 0;
+    margin-bottom: 2.5rem;
 }
 
 ul.plain li {

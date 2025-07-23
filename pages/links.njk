@@ -4,6 +4,22 @@ date: Last Modified
 description: My collection of hyperlinks from around the world wide web.
 section: links
 ---
+<p style="margin-bottom: 2rem; font-size: 1rem; font-weight: 600; color: var(--neutral-500);">NOTE: This list is extremely incomplete. <span style="font-weight: 400;">But something is better than nothing. Check back later for more links.</span></p>
+
+<ul class="plain">
+    {% for link in links %}
+    <li>
+        <a class="ext-link" target="_blank" rel="noopener noreferrer"
+            href="{{ link.url }}">{{ link.title }}</a>
+        {# {% if link.tags %}
+            {% for tag in link.tags %}
+                <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        {% endif %} #}
+    </li>
+    {% endfor %}
+</ul>
+
 <div>
     <blockquote>
         Links are the lifeblood of the web, and linking to other sites is a declaration of independence.
@@ -12,18 +28,3 @@ section: links
     </blockquote>
     <p>- <a href="https://thoughts.melonking.net/thoughts/every-site-needs-a-links-page-why-linking-matters">Every site needs a Links Page / Why linking matters</a></p>
 </div>
-
-<ul class="plain">
-    {% for link in links %}
-    <li>
-        <a class="ext-link" target="_blank" rel="noopener noreferrer"
-            href="{{ link.url }}">{{ link.title }}</a>
-        {% if link.tags %}
-            {% for tag in link.tags %}
-                {# <span class="tag">{{ tag }}</span> #}
-                <button>{{ tag }}</button>
-            {% endfor %}
-        {% endif %}
-    </li>
-    {% endfor %}
-</ul>
