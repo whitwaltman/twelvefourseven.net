@@ -5,16 +5,25 @@
         margin-bottom: 16px;
     }
 
+    article {
+        min-width: 80%;
+        max-width: 60%;
+    }
+    
+    footer {
+        max-width: 90%;
+    }
+
+    .post-header {
+        @apply text-5xl font-semibold mb-6 text-slate-400;
+    }
+
     a.ext-link {
         @apply underline text-blue-500 hover:text-blue-700;
     }
 
     a.post-link {
-        @apply underline hover:bg-lime-100;
-    }
-
-    a.footer-link {
-        @apply underline hover:bg-black hover:text-lime-400;
+        @apply underline hover:bg-lime-200;
     }
 
     code {

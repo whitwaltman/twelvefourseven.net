@@ -41,6 +41,12 @@ export default async function (config) {
         return collection.getFilteredByGlob('./src/posts/*.md');
     });
 
+    config.addCollection('recent', function (collection) {
+        return collection.getFilteredByGlob('./src/posts/*.md').sort(function (a, b) {
+            return b.date - a.date;
+        }).slice(0,12);
+    })
+
     config.addCollection('new', function (collection) {
         // https://www.11ty.dev/docs/collections-api/
         return collection.getFilteredByGlob('./src/posts/*.md').sort(function (a, b) {
@@ -99,6 +105,18 @@ export default async function (config) {
         });
         return `${time}, ${day.slice(0,3)} ${day.slice(4)}`;
     });
+
+    config.addFilter('formatPublishDate', function (created) {
+        const date = new Date(created);
+        const options = {
+            weekday: "short",
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+        };
+        const day = date.toLocaleString('en-GB', options);
+        return `${day.slice(0,3)} ${day.slice(4)}`
+    })
     
     return {
         markdownTemplateEngine: 'njk',
