@@ -8,7 +8,8 @@
     "build:format": "npx eleventy && node scripts/format-html.js",
     "debug": "DEBUG=* npx eleventy",
     "format": "node scripts/format-html.js",
-    "start": "npx eleventy --serve"
+    "start": "npx eleventy --serve",
+    "sort:links": "node scripts/sort.js ./src/_data/links.json"
   },
   "keywords": [],
   "author": "",

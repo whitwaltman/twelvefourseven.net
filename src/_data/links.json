@@ -1,24 +1,9 @@
 [
     {
-        "title": "Interconnected, a blog by Matt Webb",
-        "url": "https://interconnected.org/home/",
+        "title": "Adactio: Jeremy Keith",
+        "url": "https://adactio.com/",
         "tags": [
-            "often",
             "blog"
-        ]
-    },
-    {
-        "title": "Chase McCoy",
-        "url": "https://chsmc.org/",
-        "tags": [
-            "eleventy"
-        ]
-    },
-    {
-        "title": "nico chilla",
-        "url": "https://nicochilla.com",
-        "tags": [
-            "eleventy"
         ]
     },
     {
@@ -29,6 +14,21 @@
         ]
     },
     {
+        "title": "Brian Lovin",
+        "url": "https://brianlovin.com/"
+    },
+    {
+        "title": "Chase McCoy",
+        "url": "https://chsmc.org/",
+        "tags": [
+            "eleventy"
+        ]
+    },
+    {
+        "title": "Chia Amisola",
+        "url": "https://chia.design/"
+    },
+    {
         "title": "eieio.games",
         "url": "https://eieio.games/",
         "tags": [
@@ -37,19 +37,70 @@
         ]
     },
     {
+        "title": "everything.elliott.computer",
+        "url": "https://everything.elliott.computer/",
+        "tags": [
+            "indie"
+        ]
+    },
+    {
+        "title": "Henry From Online",
+        "url": "https://henry.codes/",
+        "tags": [
+            "eleventy"
+        ]
+    },
+    {
+        "title": "Interconnected, a blog by Matt Webb",
+        "url": "https://interconnected.org/home/",
+        "tags": [
+            "often",
+            "blog"
+        ]
+    },
+    {
+        "title": "Julia Evans",
+        "url": "https://jvns.ca/",
+        "tags": [
+            "blog",
+            "rc"
+        ]
+    },
+    {
         "title": "kevin.garden",
         "url": "https://kevin.garden"
     },
     {
-        "title": "Tom Critchlow. Move. Think. Create.",
-        "url": "https://tomcritchlow.com/",
+        "title": "Neal.fun",
+        "url": "https://neal.fun/",
         "tags": [
-            "independent"
+            "games"
+        ]
+    },
+    {
+        "title": "nico chilla",
+        "url": "https://nicochilla.com",
+        "tags": [
+            "eleventy"
+        ]
+    },
+    {
+        "title": "Piper Haywood — If lost, please return",
+        "url": "https://piperhaywood.com/",
+        "tags": [
+            "notebook"
         ]
     },
     {
         "title": "Robb Knight",
         "url": "https://rknight.me/",
+        "tags": [
+            "eleventy"
+        ]
+    },
+    {
+        "title": "Robin Rendle",
+        "url": "https://robinrendle.com/",
         "tags": [
             "eleventy"
         ]
@@ -62,24 +113,6 @@
         ]
     },
     {
-        "title": "Adactio: Jeremy Keith",
-        "url": "https://adactio.com/",
-        "tags": [
-            "blog"
-        ]
-    },
-    {
-        "title": "everything.elliott.computer",
-        "url": "https://everything.elliott.computer/",
-        "tags": [
-            "indie"
-        ]
-    },
-    {
-        "title": "Chia Amisola",
-        "url": "https://chia.design/"
-    },
-    {
         "title": "Spencer Chang",
         "url": "https://spencer.place/",
         "tags": [
@@ -87,43 +120,10 @@
         ]
     },
     {
-        "title": "Piper Haywood — If lost, please return",
-        "url": "https://piperhaywood.com/",
+        "title": "Tom Critchlow. Move. Think. Create.",
+        "url": "https://tomcritchlow.com/",
         "tags": [
-            "notebook"
-        ]
-    },
-    {
-        "title": "Robin Rendle",
-        "url": "https://robinrendle.com/",
-        "tags": [
-            "eleventy"
-        ]
-    },
-    {
-        "title": "Henry From Online",
-        "url": "https://henry.codes/",
-        "tags": [
-            "eleventy"
-        ]
-    },
-    {
-        "title": "Brian Lovin",
-        "url": "https://brianlovin.com/"
-    },
-    {
-        "title": "Neal.fun",
-        "url": "https://neal.fun/",
-        "tags": [
-            "games"
-        ]
-    },
-    {
-        "title": "Julia Evans",
-        "url": "https://jvns.ca/",
-        "tags": [
-            "blog",
-            "rc"
+            "independent"
         ]
     }
 ]
