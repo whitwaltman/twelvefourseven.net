@@ -4,17 +4,26 @@ date: Last Modified
 description: My collection of hyperlinks from around the world wide web.
 section: links
 ---
-<p>
-Links are the lifeblood of the web, and linking to other sites is a declaration of independence.
-—<a href="https://thoughts.melonking.net/thoughts/every-site-needs-a-links-page-why-linking-matters">
-    Every site needs a Links Page / Why linking matters
-</a></p>
-{% for link in links %}
-    <div class="mb-4">
-        <div class="flex flex-col md:flex-row justify-between">
-            <div><a class="ext-link" target="_blank" rel="noopener noreferrer"
-                href="{{ link.url }}">{{ link.title }}</a></div>
-            <span class="text-sm text-gray-400">{{ link.created | convertTimestamp }}</span>
-        </div>
-    </div>
-{% endfor %}
+<div>
+    <blockquote>
+        Links are the lifeblood of the web, and linking to other sites is a declaration of independence.
+        Its a declaration that says, "I am the infrastructure of the web, I am not content, nor am I a
+        product, I am a human and a participant in this great work of humanity we call the Internet".
+    </blockquote>
+    <p>- <a href="https://thoughts.melonking.net/thoughts/every-site-needs-a-links-page-why-linking-matters">Every site needs a Links Page / Why linking matters</a></p>
+</div>
+
+<ul class="plain">
+    {% for link in links %}
+    <li>
+        <a class="ext-link" target="_blank" rel="noopener noreferrer"
+            href="{{ link.url }}">{{ link.title }}</a>
+        {% if link.tags %}
+            {% for tag in link.tags %}
+                {# <span class="tag">{{ tag }}</span> #}
+                <button>{{ tag }}</button>
+            {% endfor %}
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>

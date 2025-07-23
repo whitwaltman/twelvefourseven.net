@@ -2,27 +2,39 @@
     {
         "title": "Interconnected, a blog by Matt Webb",
         "url": "https://interconnected.org/home/",
-        "tags": ["often", "blog", "notebook"]
+        "tags": [
+            "often",
+            "blog"
+        ]
     },
     {
         "title": "Chase McCoy",
         "url": "https://chsmc.org/",
-        "tags": ["often", "eleventy", "notebook"]
+        "tags": [
+            "eleventy"
+        ]
     },
     {
         "title": "nico chilla",
         "url": "https://nicochilla.com",
-        "tags": ["eleventy"]
+        "tags": [
+            "eleventy"
+        ]
     },
     {
         "title": "Andy's working notes",
         "url": "https://notes.andymatuschak.org",
-        "tags": ["notebook"]
+        "tags": [
+            "notebook"
+        ]
     },
     {
         "title": "eieio.games",
         "url": "https://eieio.games/",
-        "tags": ["games"]
+        "tags": [
+            "games",
+            "rc"
+        ]
     },
     {
         "title": "kevin.garden",
@@ -31,65 +43,87 @@
     {
         "title": "Tom Critchlow. Move. Think. Create.",
         "url": "https://tomcritchlow.com/",
-        "tags": ["notebook"]
-    },
-
-    {
-        "title": "Personal websites I visit often",
-        "sites": [
-
-            
-            {
-                "title": "Robb Knight",
-                "url": "https://rknight.me/"
-            }
+        "tags": [
+            "independent"
         ]
     },
     {
-        "title": "Blogs I like",
-        "sites": [
-            {
-                "title": "Simon Willison's Weblog",
-                "url": "https://simonwillison.net/"
-            }
+        "title": "Robb Knight",
+        "url": "https://rknight.me/",
+        "tags": [
+            "eleventy"
         ]
     },
     {
-        "title": "Independent artists",
-        "sites": [
-            {
-                "title": "everything.elliott.computer",
-                "url": "https://everything.elliott.computer/"
-            },
-            {
-                "title": "Chia Amisola",
-                "url": "https://chia.design/"
-            },
-            {
-                "title": "Spencer Chang",
-                "url": "https://spencer.place/"
-            }
+        "title": "Simon Willison's Weblog",
+        "url": "https://simonwillison.net/",
+        "tags": [
+            "blog"
         ]
     },
     {
-        "title": "Websites that inspired mine",
-        "sites": [
-            {
-                "title": "Interconnected, a blog by Matt Webb",
-                "url": "https://interconnected.org/home/"
-            },
-            {
-                "title": "Piper Haywood &#8212; If lost, please return",
-                "url": "https://piperhaywood.com/"
-            },
-            {
-                "title": "",
-                "url": ""
-            },
-            {
-                "title": "",
-                "url": ""
-            }
+        "title": "Adactio: Jeremy Keith",
+        "url": "https://adactio.com/",
+        "tags": [
+            "blog"
+        ]
+    },
+    {
+        "title": "everything.elliott.computer",
+        "url": "https://everything.elliott.computer/",
+        "tags": [
+            "indie"
+        ]
+    },
+    {
+        "title": "Chia Amisola",
+        "url": "https://chia.design/"
+    },
+    {
+        "title": "Spencer Chang",
+        "url": "https://spencer.place/",
+        "tags": [
+            "indie"
+        ]
+    },
+    {
+        "title": "Piper Haywood &#8212; If lost, please return",
+        "url": "https://piperhaywood.com/",
+        "tags": [
+            "notebook"
+        ]
+    },
+    {
+        "title": "Robin Rendle",
+        "url": "https://robinrendle.com/",
+        "tags": [
+            "eleventy"
+        ]
+    },
+    {
+        "title": "Henry From Online",
+        "url": "https://henry.codes/",
+        "tags": [
+            "eleventy"
+        ]
+    },
+    {
+        "title": "Brian Lovin",
+        "url": "https://brianlovin.com/"
+    },
+    {
+        "title": "Neal.fun",
+        "url": "https://neal.fun/",
+        "tags": [
+            "games"
+        ]
+    },
+    {
+        "title": "Julia Evans",
+        "url": "https://jvns.ca/",
+        "tags": [
+            "blog",
+            "rc"
         ]
     }
 ]

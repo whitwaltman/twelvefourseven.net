@@ -64,6 +64,36 @@ main {
     padding-top: 4rem;
 }
 
+div:has(> blockquote) {
+    background-color: var(--lime-200);
+    width: 60%;
+    min-width: 600px;
+    padding: 0.5rem;
+    border: 1px solid var(--lime-400);
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+}
+
+blockquote + p {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+ul.plain {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+ul.plain li {
+    margin-bottom: 0.5rem;
+}
+
+span.tag {
+    background-color: var(--neutral-300);
+    border: 1px solid var(--neutral-500);
+    border-radius: 4px;
+}
+
 footer p {
     font-size: 0.9rem;
 }
