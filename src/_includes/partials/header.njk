@@ -1,7 +1,7 @@
-<header class="flex flex-row gap-2.5 bg-white p-2 px-3">
-    <span class="bg-lime-400 font-semibold text-black"><a href="/">Home</a></span>
+<header class="flex flex-row gap-2.5 text-stone-400 bg-white p-2 px-3">
+    <span class="{{ 'text-black underline' if section == 'home' else '' }}"><a href="/">Home</a></span>
     <span>Blog</span>
-    <span>Links</span>
+    <span class="{{ 'text-black underline' if section == 'links' else '' }}"><a href="/links">Links</a></span>
     <span>Index</span>
     <span>More</span>
 </header>

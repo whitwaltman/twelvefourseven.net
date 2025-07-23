@@ -2,7 +2,7 @@
 
 @layer base {
     header span {
-        @apply px-1 hover:bg-lime-400;
+        @apply px-1 hover:text-black;
     }
 
     main p {
@@ -11,5 +11,9 @@
 
     main a {
         @apply bg-lime-100 hover:underline;
+    }
+
+    a.ext-link {
+        @apply bg-white underline text-blue-500 hover:text-blue-700;
     }
 }
