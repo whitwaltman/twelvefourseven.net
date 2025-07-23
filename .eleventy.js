@@ -67,23 +67,6 @@ export default async function (config) {
         return text.slice(0, 155) + "...";
     });
 
-    config.addFilter('convertTimestamp', function (timestamp) {
-        const date = new Date(timestamp * 1000);
-        const options = {
-            weekday: "short",
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-        };
-        const day = date.toLocaleString('en-GB', options);
-        const time = date.toLocaleTimeString('en-US', {
-            hour12: false,
-            hour: '2-digit',
-            minute: '2-digit'
-        });
-        return `${day} at ${time}`
-    });
-
     config.addFilter('formatBuildDate', function (date) {
         return date.toISOString();
         // return `${date.toDateString()} ${date.toLocaleTimeString()}`;
@@ -126,7 +109,7 @@ export default async function (config) {
             input: ".",
             includes: "src/_includes",
             output: "_site",
-            data: "_data"
+            data: "src/_data"
         }
     };
 }

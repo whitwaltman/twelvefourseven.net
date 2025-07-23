@@ -1,5 +1,5 @@
 {% if title %}
-    {% set pageTitle %}{{ title }}{% endset %}
+    {% set pageTitle %}{{ title }} | {{ metadata.title }}{% endset %}
 {% else %}
     {% set pageTitle %}{{ metadata.title }}{% endset %}
 {% endif %}
