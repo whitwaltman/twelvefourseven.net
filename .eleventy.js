@@ -89,6 +89,16 @@ export default async function (config) {
         return `${time}, ${day.slice(0,3)} ${day.slice(4)}`;
     });
 
+    config.addFilter('formatTime', function (created) {
+        const date = new Date(created);
+        const time = date.toLocaleTimeString('en-US', {
+            hour12: true,
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+        return `${time}`;
+    })
+
     config.addFilter('formatPublishDate', function (created) {
         const date = new Date(created);
         const options = {

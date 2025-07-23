@@ -13,6 +13,27 @@
         @apply bg-lime-100 hover:underline;
     }
 
+    h3 {
+        @apply text-2xl font-bold pt-4 pb-1;
+    }
+
+    ul {
+        @apply list-disc list-inside;
+        margin-bottom: 16px;
+    }
+    
+    code {
+        display: inline;
+        @apply bg-gray-100 rounded-sm px-0.5 border-1 border-gray-400;
+    }
+
+    pre code {
+        overflow-x: scroll;
+        @apply bg-black text-white p-2 rounded-md;
+        display: block;
+        margin-bottom: 16px;
+    }
+
     a.ext-link {
         @apply bg-white underline text-blue-500 hover:text-blue-700;
     }

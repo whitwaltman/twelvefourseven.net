@@ -1,10 +1,10 @@
 ---
-layout: layouts/page.njk
 title: Self-hosting with OpenBSD
+date: Last Modified
 ---
 <aside class="bg-lime-200 border-1 border-lime-400 p-1 rounded-sm my-1.5">
     <p>These notes are specifically tailored to my usage of OpenBSD as a virtual private server to host my websites.</p>
-    <p>If you're new to self-hosting or want to explore it, I highly recommend <a href="https://sive.rs/ti">Derek Siver's guide to Tech Independence</a>. It's a helpful starting point, although I would caution against trying to do everything at once.</p>
+    <p class="mb-0">If you're new to self-hosting or want to explore it, I highly recommend <a class="bg-lime-400" href="https://sive.rs/ti">Derek Siver's guide to Tech Independence</a>. It's a helpful starting point, although I would caution against trying to do everything at once.</p>
 </aside>
 
 ### httpd
@@ -17,7 +17,7 @@ There are some great tutorials and walkthroughs already out there, so I'm not go
 - [Basic Web Server (httpd) | OpenBSD Handbook](https://www.openbsdhandbook.com/services/webserver/basic_webserver/)
 - [How to setup a web server with OpenBSD](https://www.bsdhowto.ch/webserver.html)
 
-I'd also be remiss to not mention the gold-standard OpenBSD `man` pages. <a href="https://man.openbsd.org/httpd.conf">Here's the one for `httpd`</a>.
+I'd also be remiss to not mention the OpenBSD `man` pages, arguably the gold-standard of documentation. <a href="https://man.openbsd.org/httpd.conf">Here's the one for httpd</a>.
 
 It's a good idea to obtain an SSL certificate for your site. Once you create your webroot directory (default chroot jail = `/var/www`), you can edit `/etc/httpd.conf` so you can access your site. (I'm skipping a lot of the initial setup steps. Read one of the tutorials I linked if you need more help.)
 

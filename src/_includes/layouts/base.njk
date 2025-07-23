@@ -34,10 +34,12 @@
 <body class="bg-neutral-800 min-h-screen">
     {# TODO: edit base style to improve readability (incl. responsive layout) #}
     {% include "partials/header.njk" %}
-    <main class="min-h-screen bg-white px-4 pt-12">
-        {% block content %}
-        {{ content | safe }}
-        {% endblock %}
+    <main class="min-h-screen bg-white px-4 pt-12 m-auto">
+        <div class="content bg-white max-w-3/5">
+            {% block content %}
+            {{ content | safe }}
+            {% endblock %}
+        </div>
     </main>
     {% include "partials/footer.njk" %}
 </body>
