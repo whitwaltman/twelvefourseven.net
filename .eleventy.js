@@ -123,7 +123,8 @@ export default async function (config) {
         dataTemplateEngine: 'njk',
         htmlTemplateEngine: 'njk',
         dir: {
-            input: "src",
+            input: ".",
+            includes: "src/_includes",
             output: "_site",
             data: "_data"
         }
