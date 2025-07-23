@@ -1,11 +1,17 @@
 <header>
-    <span {% if section == 'home' %}
+    <span><a {% if section == 'home' %}
         style="color: black; text-decoration: underline;"
-        {% endif %}><a href="/">Home</a></span>
-    <span>Blog</span>
-    <span {% if section == 'links' %}
+        {% endif %} href="/">Home</a></span>
+    <span><a {% if section == 'blog' %}
         style="color: black; text-decoration: underline;"
-        {% endif %}><a href="/links">Links</a></span>
-    <span>Index</span>
-    <span>More</span>
+        {% endif %} href="/blog">Blog</a></span>
+    <span><a {% if section == 'links' %}
+        style="color: black; text-decoration: underline;"
+        {% endif %} href="/links">Links</a></span>
+    <span><a {% if section == 'now' %}
+        style="color: black; text-decoration: underline;"
+        {% endif %} href="/now">Now</a></span>
+    <span><a {% if section == 'more' %}
+        style="color: black; text-decoration: underline;"
+        {% endif %} href="/more">More</a></span>
 </header>

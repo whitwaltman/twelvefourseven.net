@@ -5,6 +5,11 @@
 2. `npm run format`
 3. `./scripts/deploy.sh` (optional `--delete` flag available)
 
+## future
+- [ ] fetch link data from personal API (https://www.11ty.dev/docs/data-js/)
+
+NONE OF THE STUFF BELOW IS CORRECT AS OF 2025-07-23 !!!
+
 ## directory structure
 - all site content is located in /src
 - config follows standard eleventy conventions (src/_includes for layouts, src/_data for global data)

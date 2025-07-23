@@ -1,0 +1,95 @@
+[
+    {
+        "title": "Interconnected, a blog by Matt Webb",
+        "url": "https://interconnected.org/home/",
+        "tags": ["often", "blog", "notebook"]
+    },
+    {
+        "title": "Chase McCoy",
+        "url": "https://chsmc.org/",
+        "tags": ["often", "eleventy", "notebook"]
+    },
+    {
+        "title": "nico chilla",
+        "url": "https://nicochilla.com",
+        "tags": ["eleventy"]
+    },
+    {
+        "title": "Andy's working notes",
+        "url": "https://notes.andymatuschak.org",
+        "tags": ["notebook"]
+    },
+    {
+        "title": "eieio.games",
+        "url": "https://eieio.games/",
+        "tags": ["games"]
+    },
+    {
+        "title": "kevin.garden",
+        "url": "https://kevin.garden"
+    },
+    {
+        "title": "Tom Critchlow. Move. Think. Create.",
+        "url": "https://tomcritchlow.com/",
+        "tags": ["notebook"]
+    },
+
+    {
+        "title": "Personal websites I visit often",
+        "sites": [
+
+            
+            {
+                "title": "Robb Knight",
+                "url": "https://rknight.me/"
+            }
+        ]
+    },
+    {
+        "title": "Blogs I like",
+        "sites": [
+            {
+                "title": "Simon Willison's Weblog",
+                "url": "https://simonwillison.net/"
+            }
+        ]
+    },
+    {
+        "title": "Independent artists",
+        "sites": [
+            {
+                "title": "everything.elliott.computer",
+                "url": "https://everything.elliott.computer/"
+            },
+            {
+                "title": "Chia Amisola",
+                "url": "https://chia.design/"
+            },
+            {
+                "title": "Spencer Chang",
+                "url": "https://spencer.place/"
+            }
+        ]
+    },
+    {
+        "title": "Websites that inspired mine",
+        "sites": [
+            {
+                "title": "Interconnected, a blog by Matt Webb",
+                "url": "https://interconnected.org/home/"
+            },
+            {
+                "title": "Piper Haywood &#8212; If lost, please return",
+                "url": "https://piperhaywood.com/"
+            },
+            {
+                "title": "",
+                "url": ""
+            },
+            {
+                "title": "",
+                "url": ""
+            }
+        ]
+    }
+]

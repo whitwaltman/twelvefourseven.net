@@ -1,5 +1,13 @@
 ---
-title: blog
+title: Blog
 date: Last Modified
 section: blog
 ---
+<ul style="list-style-type: none; padding-inline-start: 0;">
+    {% for post in collections.posts | reverse %}
+    <li style="margin-bottom: 0.5rem;">
+        <a style="font-size: 1.2rem; font-weight: 500;"href="{{ post.url }}">{{ post.data.title }}</a>
+        <span style="font-size: 0.9rem; text-wrap: nowrap;">{{ post.date | formatPublishDate }}</span>
+    </li>
+    {% endfor %}
+</ul>

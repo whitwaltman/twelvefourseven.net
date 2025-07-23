@@ -13,7 +13,7 @@ export default async function (config) {
     });
 
     config.addCollection('posts', function (collection) {
-        return collection.getFilteredByGlob('./src/posts/*.md');
+        return collection.getFilteredByGlob('./posts/*.md');
     });
 
     config.addCollection('recent', function (collection) {
@@ -64,15 +64,11 @@ export default async function (config) {
         return `${time}, ${day.slice(0,3)} ${day.slice(4)}`;
     });
 
-    config.addFilter('formatTime', function (created) {
+    config.addFilter('formatPageDate', function (created) {
         const date = new Date(created);
-        const time = date.toLocaleTimeString('en-US', {
-            hour12: true,
-            hour: '2-digit',
-            minute: '2-digit'
-        });
-        return `${time}`;
-    })
+        const month = date.getMonth() + 1;
+        return `${date.getFullYear()}-${month.toString().padStart(2, "0")}-${date.getDate()}`;
+    });
 
     config.addFilter('formatPublishDate', function (created) {
         const date = new Date(created);
@@ -84,7 +80,7 @@ export default async function (config) {
         };
         const day = date.toLocaleString('en-GB', options);
         return `${day.slice(0,3)} ${day.slice(4)}`
-    })
+    });
     
     return {
         markdownTemplateEngine: 'njk',

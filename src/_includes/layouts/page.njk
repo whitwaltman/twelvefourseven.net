@@ -1,9 +1,9 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
-    <h2>{{ title }}</h2>
+    <h1 style="margin-bottom: 16px;">{{ title }}</h1>
     {{ content | safe}}
-    <div>
-        <p>LAST UPDATED: {{ page.date | formatPublishDate }} at {{ page.date | formatTime }}</p>
-        {# {{ page | dump }} #}
+    <div style="margin-top: 1.5rem;">
+        <p style="color: var(--gray-400); font-size: 0.75rem; font-weight: 500;">
+            Last updated {{ page.date | formatPageDate }}.</p>
     </div>
 {% endblock %}
