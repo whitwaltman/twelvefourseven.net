@@ -1,7 +1,7 @@
-<footer class="h-fit p-4 text-gray-300">
-    <p>Questions? Comments? Fun facts? Send 'em to: <span class="border-1 border-gray-500 px-0.25">whitwaltman at mailbox dot org</span></p>
-    <div class="flex flex-row justify-between text-lime-400">
-        <p>Thanks for stopping by :^)</p>
-        <p class="text-gray-500">Last build: {{ metadata.buildTime | formatBuildDate }}</p>
+<footer>
+    <p style="color: var(--gray-200);">Questions? Comments? Fun facts? Send 'em to: <span>whitwaltman at mailbox dot org</span></p>
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <p style="color: var(--lime-400);">Thanks for stopping by :^)</p>
+        <p style="color: var(--gray-400)">Last build: {{ metadata.buildTime | formatBuildDate }}</p>
     </div>
 </footer>

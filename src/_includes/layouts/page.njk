@@ -1,9 +1,9 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
-    <h2 class="text-5xl font-medium mb-6 text-slate-400">{{ title }}</h2>
+    <h2>{{ title }}</h2>
     {{ content | safe}}
-    <div class="mt-12 pb-6">
-        <p class="mb-0 text-sm text-neutral-400">LAST UPDATED: {{ page.date | formatPublishDate }} at {{ page.date | formatTime }}</p>
+    <div>
+        <p>LAST UPDATED: {{ page.date | formatPublishDate }} at {{ page.date | formatTime }}</p>
         {# {{ page | dump }} #}
     </div>
 {% endblock %}

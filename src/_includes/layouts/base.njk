@@ -22,20 +22,21 @@
 
     <title>{{ pageTitle }}</title>
     <link href="/assets/favicon.ico" rel="icon">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
 
     <meta property="og:site_name" content="{{ metadata.title }}">
     <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
     <meta property="og:title" content="{{ pageTitle }}">
+    <meta property="og:description" content="{{ pageDescription }}">
     <meta name="description" content="{{ pageDescription }}">
 </head>
 
-<body class="bg-neutral-800 min-h-screen">
+<body>
     {# TODO: edit base style to improve readability (incl. responsive layout) #}
     {% include "partials/header.njk" %}
-    <main class="min-h-screen bg-white px-4 pt-12 m-auto">
-        <div class="content bg-white max-w-3/5">
+    <main>
+        <div class="content">
             {% block content %}
             {{ content | safe }}
             {% endblock %}
