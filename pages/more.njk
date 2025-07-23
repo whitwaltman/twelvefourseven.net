@@ -5,15 +5,11 @@ section: more
 ---
 <ul class="plain">
     <li>
-        <a href="/countdown">Countdown</a> the days until I'm back in Pittsburgh
+        <p><a href="/countdown">Countdown</a> the days until I'm back in Pittsburgh</p>
     </li>
-</ul>
-
-<h2>Reference pages</h2>
-<ul class="plain">
     {% for p in collections.ref %}
     <li>
-        <a href="{{ p.url }}">{{ p.data.title }}</a>
+        <p><a href="{{ p.url }}">{{ p.data.title }}</a></p>
     </li>
     {% endfor %}
 </ul>
