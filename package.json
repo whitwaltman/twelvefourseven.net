@@ -5,9 +5,9 @@
   "scripts": {
     "build": "npx eleventy",
     "build:clean": "rm -rf _site && npx eleventy",
-    "build:format": "npx eleventy && rm _site/assets/favicon-dev.ico && node scripts/format-html.js",
+    "build:format": "npx eleventy && node scripts/format-html.js",
     "debug": "DEBUG=* npx eleventy",
-    "format": "rm _site/assets/favicon-dev.ico && node scripts/format-html.js",
+    "format": "node scripts/format-html.js",
     "start": "npx eleventy --serve"
   },
   "keywords": [],

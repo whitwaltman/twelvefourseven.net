@@ -1,41 +1,15 @@
 @import "tailwindcss";
 
 @layer base {
+    header span {
+        @apply px-1 hover:bg-lime-400;
+    }
+
     main p {
         margin-bottom: 16px;
     }
 
-    article {
-        min-width: 80%;
-        max-width: 60%;
-    }
-    
-    footer {
-        max-width: 90%;
-    }
-
-    .post-header {
-        @apply text-5xl font-semibold mb-6 text-slate-400;
-    }
-
-    a.ext-link {
-        @apply underline text-blue-500 hover:text-blue-700;
-    }
-
-    a.post-link {
-        @apply underline hover:bg-lime-200;
-    }
-
-    code {
-        @apply bg-gray-200 p-0.5 border-1;
-    }
-
-    h3 {
-        @apply pb-0.5 text-xl font-semibold;
-    }
-
-    aside {
-        @apply bg-gray-200 text-sm;
-        @apply p-2 m-4;
+    main a {
+        @apply bg-lime-100 hover:underline;
     }
 }

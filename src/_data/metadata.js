@@ -1,7 +1,6 @@
 export default {
     title: "twelvefourseven.net",
     url: "https://twelvefourseven.net",
-    language: "en",
-    description: "The internet home of Whit Waltman",
+    description: "The public notebook of Whit Waltman. Finding a form to accommodate the mess.",
     buildTime: new Date()
 }
