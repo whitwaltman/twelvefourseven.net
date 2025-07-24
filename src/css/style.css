@@ -64,6 +64,10 @@ h5 {
     margin-bottom: 4rem;
 } */
 
+article {
+    margin-bottom: 4rem;
+}
+
 article p {
     margin-bottom: 0.75rem;
 }

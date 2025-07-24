@@ -39,7 +39,7 @@ export default async function (config) {
     });
 
     config.addShortcode("break", function () {
-        return `<hr class="my-4 w-1/3">`;
+        return `<hr class="xh1 bg-white w3 ml0 mv5 bb-0 bl-0 br-0 bt-1 b--black" />`;
     });
 
     config.addFilter('truncate', function (text) {
