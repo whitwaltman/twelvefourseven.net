@@ -1,0 +1,25 @@
+---
+title: Blog
+date: Last Modified
+section: blog
+---
+<p>
+    Okay I know I <a href="/">just</a> said that this is my public notebook, but that's slightly untrue.
+    Yes, I consider this site to be a notebook of sorts, in the sense that it's unvarnished and somewhat raw
+    and contains a vast array of subjects and thoughts. This part of the site is the one exception.
+</p>
+<p>
+    I thought about partitioning it off and placing it on its own subdomain, but I think there's value in
+    keeping it all in one place. (I do technically violate this principle with
+    <a href="https://code.twelvefourseven.net" target="_blank">code.twelvefourseven.net</a>, but for a
+    specific reason!)
+</p>
+
+<ul class="plain">
+    {% for post in collections.posts | reverse %}
+    <li>
+        <a style="font-size: 1.2rem; font-weight: 500;"href="{{ post.url }}">{{ post.data.title }}</a>
+        <span style="font-size: 0.9rem; text-wrap: nowrap;">{{ post.date | formatPublishDate }}</span>
+    </li>
+    {% endfor %}
+</ul>
