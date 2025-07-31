@@ -1,5 +1,6 @@
 ---
 title: Self-hosting with OpenBSD
+layout: layouts/page.njk
 date: Last Modified
 ---
 <aside class="bg-lime-200 border-1 border-lime-400 p-1 rounded-sm my-1.5">

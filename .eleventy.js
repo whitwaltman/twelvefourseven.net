@@ -8,6 +8,9 @@ export default async function (config) {
         './src/css/': 'css'
     });
 
+    // https://stackoverflow.com/a/79218094
+    config.addGlobalData('layout', 'layouts/base.njk');
+
     config.setFrontMatterParsingOptions({
         excerpt: true,
     });

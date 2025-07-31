@@ -1,0 +1,10 @@
+---
+title: Catalogue
+section: catalogue
+---
+<ul>
+    {% for page in collections.all %}
+        {# <li><a href="{{ page.url }}">{{ page.data.title }}</a></li> #}
+        <li><a href="{{ page.url }}">{{ page.url }}</a></li>
+    {% endfor %}
+</ul>
