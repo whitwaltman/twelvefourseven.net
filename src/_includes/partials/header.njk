@@ -2,16 +2,20 @@
     <span><a {% if section == 'home' %}
         style="color: black; text-decoration: underline;"
         {% endif %} href="/">Home</a></span>
-    <span><a {% if section == 'blog' %}
+    
+    <span><a {% if section == 'posts' %}
         style="color: black; text-decoration: underline;"
-        {% endif %} href="/blog">Blog</a></span>
-    <span><a {% if section == 'links' %}
-        style="color: black; text-decoration: underline;"
-        {% endif %} href="/links">Links</a></span>
+        {% endif %} href="/posts/">Posts</a></span>
+    
+    <span><a {% if section == 'shoebox' %}
+         style="color: black; text-decoration: underline;"
+        {% endif %} href="/shoebox/">Shoebox</a></span>
+
     <span><a {% if section == 'now' %}
         style="color: black; text-decoration: underline;"
-        {% endif %} href="/now">Now</a></span>
-    <span><a {% if section == 'catalogue' %}
+        {% endif %} href="/now/">Now</a></span>
+        
+    <span><a {% if section == 'index' %}
         style="color: black; text-decoration: underline;"
-        {% endif %} href="/catalogue">Catalogue</a></span>
+        {% endif %} href="/index/">Index</a></span>
 </header>

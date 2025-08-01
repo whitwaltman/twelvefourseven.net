@@ -1,0 +1,12 @@
+---
+title: Shoebox
+date: Last Modified
+section: shoebox
+---
+A collection of things that defy typical categorization. Inspired by <a href="https://gilest.org/shoebox/index.html">Giles Turnbull</a>
+
+<ul>
+    {% for item in collections.shoebox %}
+    <li><a href="{{ item.url }}">{{ item.url }}</a></li>
+    {% endfor %}
+</ul>

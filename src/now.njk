@@ -2,9 +2,8 @@
 title: Now
 date: Last Modified
 section: now
+archive: collections.then
 ---
-<ul>
-    <li>working on this website</li>
-    <li>figuring out some health stuff</li>
-    <li>listening to Lorde's new album</li>
-</ul>
+{% for post in collections.now %}
+{{ post.content | safe }}
+{% endfor %}

@@ -2,8 +2,6 @@
 title: Ghosts in the registers
 ---
 
-note: while i wrote this post a few weeks ago, i've been unsatisfied with it lately and am thinking about revising and/or deleting it. sorry.
-
 Sometimes when I've selected and copied a chunk of text and haven't pasted it yet, it feels like I'm holding something in my hand that I need to put down. Every so often, I'm unable to recall what I picked up until I place it down somewhere, like tipping out a bag to see what's inside.
 ---
 

@@ -19,15 +19,27 @@ export default async function (config) {
         return collection.getFilteredByGlob('./posts/*.md');
     });
 
-    config.addCollection('ref', function (collection) {
-        return collection.getFilteredByGlob('./ref/*.md');
-    })
-
     config.addCollection('recent', function (collection) {
         return collection.getFilteredByGlob('./posts/*.md').sort(function (a, b) {
             return b.date - a.date;
-        }).slice(0,12);
-    })
+        }).slice(0,8);
+    });
+
+    config.addCollection('shoebox', function (collection) {
+        return collection.getFilteredByGlob('./shoebox/*.njk');
+    });
+
+    config.addCollection('now', function (collection) {
+        return collection.getFilteredByGlob('./now/*.md').sort(function (a, b) {
+            return b.date - a.date;
+        }).slice(0, 1);
+    });
+
+    config.addCollection('then', function (collection) {
+        return collection.getFilteredByGlob('./now/*.md').sort(function (a, b) {
+            return b.date - a.date;
+        }).slice(1);
+    });
 
     // config.addCollection('new', function (collection) {
     //     // https://www.11ty.dev/docs/collections-api/
@@ -73,8 +85,9 @@ export default async function (config) {
 
     config.addFilter('formatPageDate', function (created) {
         const date = new Date(created);
-        const month = date.getMonth() + 1;
-        return `${date.getFullYear()}-${month.toString().padStart(2, "0")}-${date.getDate()}`;
+        const month = (date.getMonth() + 1).toString().padStart(2, "0");
+        const day = date.getDate().toString().padStart(2, "0");
+        return `${date.getFullYear()}-${month}-${day}`;
     });
 
     config.addFilter('formatPublishDate', function (created) {
