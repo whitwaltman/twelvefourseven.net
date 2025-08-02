@@ -1,6 +1,11 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
-    <h1 style="margin-bottom: 32px;">{{ title }}</h1>
+    <div style="margin-bottom: 1rem;">
+        <h1>{{ title }}</h1>
+        {% if description %}
+            <p class="description">{{ description }}</p>
+        {% endif %}
+    </div>
     {{ content | safe}}
     {# <div style="margin-top: 1.5rem;">
         <p style="color: var(--gray-400); font-size: 0.75rem; font-weight: 500;">

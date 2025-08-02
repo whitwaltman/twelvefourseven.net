@@ -2,8 +2,20 @@
 title: Now
 date: Last Modified
 section: now
-archive: collections.then
+description: What I'm doing now (h/t Derek Sivers). See nownownow.com for more.
 ---
-{% for post in collections.now %}
-{{ post.content | safe }}
+{% for update in collections.now %}
+    <p class="now-update">Updated {{ update.fileSlug }}</p>
+    {{ update.content | safe }}
 {% endfor %}
+<hr>
+
+<details>
+    <summary>Then</summary>
+    {% for post in collections.then %}
+        <details>
+            <summary>{{ post.fileSlug }}</summary>
+            {{ post.content | safe }}
+        </details>
+    {% endfor %}
+</details>

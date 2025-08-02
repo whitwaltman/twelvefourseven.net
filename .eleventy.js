@@ -24,7 +24,9 @@ export default async function (config) {
     });
 
     config.addCollection('posts', function (collection) {
-        return collection.getFilteredByGlob('./posts/*.md');
+        return collection.getFilteredByGlob('./posts/*.md').sort((a, b) => {
+            return b.date - a.date;
+        });
     });
 
     config.addCollection('recent', function (collection) {
@@ -59,10 +61,6 @@ export default async function (config) {
     config.addShortcode("extLink", function (url, text) {
         return `<a class='ext-link' target='_blank' rel='noopener noreferrer' 
             href='${url}'>${text}<span>&nearrow;</span></a>`;
-    });
-
-    config.addShortcode("break", function () {
-        return `<hr class="xh1 bg-white w3 ml0 mv5 bb-0 bl-0 br-0 bt-1 b--black" />`;
     });
 
     config.addFilter('truncate', function (text) {
@@ -101,13 +99,11 @@ export default async function (config) {
     config.addFilter('formatPublishDate', function (created) {
         const date = new Date(created);
         const options = {
-            weekday: "short",
-            year: "numeric",
-            month: "short",
-            day: "numeric",
+            month: "long",
         };
-        const day = date.toLocaleString('en-GB', options);
-        return `${day.slice(0,3)} ${day.slice(4)}`
+        const month = date.toLocaleString('en-GB', options);
+        const day = date.getDate().toString().padStart(2, "0");
+        return `${day} ${month}`;
     });
     
     return {

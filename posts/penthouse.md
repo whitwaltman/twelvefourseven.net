@@ -9,7 +9,7 @@ I’ve started calling these “penthouse thoughts”. It’s not a great name, 
 
 A penthouse thought is **stickier** than an ordinary passing thought. You might not realize it at first, but it lurks. It has an edge: a question I can’t quite answer, or an idea that bridges the connection between two things I previously thought unrelated. Over time, it’ll eventually fade or become part of something bigger. But while it’s there, it tends to shape how I notice things.
 
-{% break %}
+***
 
 Lately, the thought that’s been pacing around up there is about language — mainly, the chasm between thinking in one language and translating thoughts into another. It’s something that’s been building slowly, quietly in my head for a while now, but it came into focus recently while I was messing around with numbers.
 
