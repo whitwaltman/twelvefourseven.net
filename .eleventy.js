@@ -16,9 +16,11 @@ export default async function (config) {
     });
 
     config.addCollection('index', function (collection) {
-        return collection.getAll().sort(function (a, b) {
-            return b.url - b.url;
+        const all = collection.getAll().filter(function (item) {
+            return item.url !== false && item.url !== "/";
         });
+
+        return all.sort((a, b) => b.url - a.url);
     });
 
     config.addCollection('posts', function (collection) {
@@ -26,7 +28,7 @@ export default async function (config) {
     });
 
     config.addCollection('recent', function (collection) {
-        return collection.getFilteredByGlob('./posts/*.md').sort(function (a, b) {
+        return collection.getFilteredByGlob('./posts/*.md').sort((a, b) => {
             return b.date - a.date;
         }).slice(0,8);
     });
