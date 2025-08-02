@@ -64,20 +64,7 @@ h5 {
 p.description {
     color: var(--slate-600);
     font-weight: 300;
-    font-size: 0.9rem;
 }
-
-p.now-update {
-    font-weight: 500;
-    font-size: 0.75rem;
-    color: var(--gray-400);
-}
-
-/* article {
-    width: 60%;
-    min-width: 600px;
-    margin-bottom: 4rem;
-} */
 
 article {
     margin-bottom: 4rem;

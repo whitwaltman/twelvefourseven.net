@@ -1,0 +1,11 @@
+---
+title: Then
+date: Last Modified
+description: I like keeping records for archival purposes. These are all of my past /now updates.
+---
+{% for post in collections.then %}
+    <details>
+        <summary>{{ post.fileSlug }}</summary>
+        {{ post.content | safe }}
+    </details>
+{% endfor %}

@@ -68,7 +68,7 @@ export default async function (config) {
     });
 
     config.addFilter('formatBuildDate', function (date) {
-        return date.toISOString();
+        return date.toString();
         // return `${date.toDateString()} ${date.toLocaleTimeString()}`;
     });
 
