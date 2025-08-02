@@ -15,6 +15,12 @@ export default async function (config) {
         excerpt: true,
     });
 
+    config.addCollection('index', function (collection) {
+        return collection.getAll().sort(function (a, b) {
+            return b.url - b.url;
+        });
+    });
+
     config.addCollection('posts', function (collection) {
         return collection.getFilteredByGlob('./posts/*.md');
     });
