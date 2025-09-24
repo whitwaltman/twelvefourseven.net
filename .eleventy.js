@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import postcss from 'postcss';
 import tailwindcss from '@tailwindcss/postcss';
+import yaml from "js-yaml";
 
 export default async function (config) {
     config.on('eleventy.before', async () => {
@@ -24,6 +25,10 @@ export default async function (config) {
     const processor = postcss([
         tailwindcss(),
     ]);
+
+    config.addDataExtension("yaml", (contents) => {
+        return yaml.load(contents)
+    });
     
     config.addShortcode("a", function (url, text) {
         return `<a class="ext-link" target="_blank" rel="noopener noreferrer"
