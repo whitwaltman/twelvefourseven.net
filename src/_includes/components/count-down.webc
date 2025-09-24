@@ -1,5 +1,0 @@
-Hello! <span @html="this.name" :class="this.name"></span>
----
-<count-down @name="ray"></count-down>
----
-Hello! <span class="ray">ray</span>

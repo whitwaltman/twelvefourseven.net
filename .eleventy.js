@@ -1,8 +1,8 @@
+import pluginWebc from "@11ty/eleventy-plugin-webc";
+
 export default async function (config) {
-    
-    config.addPassthroughCopy({
-        './src/assets/': 'assets',
-        './src/css/': 'css'
+    config.addPlugin(pluginWebc, {
+        components: "_includes/components/*.webc"
     });
 
     // https://stackoverflow.com/a/79218094
