@@ -1,12 +1,12 @@
 ---
 layout: layouts/html.njk
 ---
-<header>
-    <h1><a href="{{ metadata.url }}">{{ metadata.title }}</a></h1>
+<header class="px-3 py-1.5">
+    <h1 class="text-xl font-medium text-right"><a class="text-blue-700 underline" href="{{ metadata.url }}">{{ metadata.title }}</a></h1>
 </header>
-<main>
+<main class="px-3 py-1.5 flex-1">
     {{ content | safe }}
 </main>
-<footer>
-    Assembled by hand with words and pixels.
+<footer class="px-3 py-1.5 bg-black">
+    <p class="text-sm text-white">Assembled by hand with words and pixels.</p>
 </footer>
