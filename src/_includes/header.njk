@@ -1,3 +1,12 @@
-<header class="">
-    
+<header class="text-2xl px-3 py-1.5 mb-4">
+    <span>xii.iv.vii</span>:
+    <span {% if "index" in page.filePathStem %}
+            class="bg-lime-300"
+            {% endif %}><a href="/">index</a></span>
+    <span {% if "countdown" in page.filePathStem %}
+            class="bg-lime-300"
+            {% endif %}><a href="/countdown">countdown</a></span>
+    <span {% if "now" in page.filePathStem %}
+            class="bg-lime-300"
+            {% endif %}><a href="/now">now</a></span>
 </header>
