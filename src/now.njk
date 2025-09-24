@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+---
+<h1>Now</h1>
+<p>Here's what I'm up to right now</p>
+
+<p>{{ site.title }} + {{ site.author }}</p>
+
+{% for entry in now %}
+<p>{{ entry.date }}</p>
+<ul>
+    {% for bullet in entry.content %}
+        <li>{{ bullet }}</li>
+    {% endfor %}
+</ul>
+{% endfor %}
