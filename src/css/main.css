@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@layer base {
+    :root {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6, ul, ol {
+        all: revert;
+    }
+
+    p + p {
+        @apply pt-2;
+    }
+}
