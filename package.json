@@ -5,14 +5,13 @@
   "scripts": {
     "build": "npx eleventy",
     "build:clean": "rm -rf _site && npx eleventy",
-    "build:format": "npx eleventy && node utils/format-html.js",
+    "build:format": "npx eleventy && node utils/format.js",
     "debug": "DEBUG=* npx eleventy",
-    "format": "node utils/format-html.js",
-    "start": "npx eleventy --serve",
-    "sort:links": "node utils/sort.js ./src/_data/links.json"
+    "format": "node utils/format.js",
+    "start": "npx eleventy --serve"
   },
   "keywords": [],
-  "author": "",
+  "author": "whit waltman",
   "license": "ISC",
   "description": "",
   "dependencies": {
