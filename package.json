@@ -15,11 +15,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@11ty/eleventy": "^3.1.0",
-    "@11ty/eleventy-plugin-webc": "^0.4.0"
+    "@11ty/eleventy": "^3.1.0"
   },
   "devDependencies": {
-    "@11ty/eleventy-img": "^6.0.4",
     "prettier": "^3.6.1"
   },
   "type": "module"
