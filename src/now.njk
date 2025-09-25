@@ -7,8 +7,7 @@ layout: layouts/base.njk
     for me to keep track of what I'm doing and thinking about.
 </p>
 <p>
-    If you have your own site, you should consider
-    {% a "https://nownownow.com/about", "adding a now page" %}.
+    If you have your own site, you should consider {% a "https://nownownow.com/about", "adding a now page" %}.
 </p>
 
 {% for i in range(0, now.length) %}
@@ -20,7 +19,7 @@ layout: layouts/base.njk
         <span class="date text-neutral-400">Updated {{ now[i].date | simpleDate }}</span>
         {% else %}
         <span>THEN</span>
-        <span class="date text-neutral-500">Updated {{ now[i].date | simpleDate }}</span>
+        <span class="date text-neutral-500">{{ now[i].date | simpleDate }}</span>
         {% endif %}
     </div>
     <ul>

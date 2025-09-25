@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+---
+<script>
+    const future = new Date(2025, 9, 15, 7, 5);
+    const now = new Date();
+    const diff = future - now;
+
+
+    const days = diff / (1000 * 60 * 60 * 24);
+    const hrs = (days - Math.floor(days)) * 24;
+    const mins = (hours - Math.floor(hours)) * 60;
+
+    const pluralize = (unit, amt) => {
+        return amt === 1 ? unit : unit + "s";
+    }
+</script>

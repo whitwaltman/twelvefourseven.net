@@ -16,6 +16,11 @@
     .ext-link {
         @apply text-blue-700 underline;
     }
+
+    .ext-link span {
+        font-family: system-ui;
+        @apply font-bold;
+    }
     
     .update {
         @apply mt-8 border-2 p-2;

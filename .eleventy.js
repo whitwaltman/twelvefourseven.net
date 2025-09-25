@@ -42,8 +42,8 @@ export default async function (config) {
     })
     
     config.addShortcode("a", function (url, text) {
-        return `<a class="ext-link" target="_blank" rel="noopener noreferrer"
-                href="${url}">${text}<span>&nearrow;</span></a>`;
+        const metadata = 'class="ext-link" target="_blank" rel="noopener noreferrer"';
+        return `<a ${metadata} href="${url}">${text}<span>&nearrow;</span></a>`;
     });
 
     return {
