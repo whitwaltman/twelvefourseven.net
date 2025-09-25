@@ -3,7 +3,7 @@
 ## build and deploy
 1. `npm run build:clean`
 2. `npm run format`
-3. `./scripts/deploy.sh` (optional `--delete` flag available)
+3. `./utils/deploy.sh` (optional `--delete` flag available)
 
 ## countdown notes
 

@@ -10,7 +10,7 @@
     }
 
     p + p {
-        @apply pt-2;
+        @apply pt-3;
     }
 
     .ext-link {
