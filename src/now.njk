@@ -11,14 +11,22 @@ layout: layouts/base.njk
     {% a "https://nownownow.com/about", "adding a now page" %}.
 </p>
 
-<div class="update">
+{% for i in range(0, now.length) %}
+<div {% if i > 0 %} class="update then"
+    {% else %} class="update" {% endif %}>
     <div class="status-bar">
+        {% if i == 0 %}
         <span>NOW</span>
-        <span class="text-neutral-400">Updated {{ now[0].date | simpleDate }}</span>
+        <span class="date text-neutral-400">Updated {{ now[i].date | simpleDate }}</span>
+        {% else %}
+        <span>THEN</span>
+        <span class="date text-neutral-500">Updated {{ now[i].date | simpleDate }}</span>
+        {% endif %}
     </div>
     <ul>
-        {% for bullet in now[0].content %}
+        {% for bullet in now[i].content %}
         <li>{{ bullet }}</li>
         {% endfor %}
     </ul>
 </div>
+{% endfor %}

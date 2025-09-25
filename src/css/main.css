@@ -35,4 +35,8 @@
         @apply px-1;
         list-style-type: lower-roman;
     }
+
+    .then {
+        @apply bg-neutral-200;
+    }
 }
