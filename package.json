@@ -11,9 +11,13 @@
     "start": "npx eleventy --serve"
   },
   "keywords": [],
-  "author": "whit waltman",
+  "author": "whitwaltman",
   "license": "ISC",
   "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.alt:whitwaltman/twelvefourseven.net.git"
+  },
   "dependencies": {
     "@11ty/eleventy": "^3.1.0",
     "tailwindcss": "^4.1.13"

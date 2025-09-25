@@ -1,17 +1,13 @@
 ---
 layout: layouts/base.njk
 ---
+<p>
+    This is a page to display countdowns to events in my life.
+    It gives me something to look forward to and helps me conceptualize the passage of time.
+</p>
+<p>As of <span id="now"></span></p>
+
 <script>
-    const future = new Date(2025, 9, 15, 7, 5);
     const now = new Date();
-    const diff = future - now;
-
-
-    const days = diff / (1000 * 60 * 60 * 24);
-    const hrs = (days - Math.floor(days)) * 24;
-    const mins = (hours - Math.floor(hours)) * 60;
-
-    const pluralize = (unit, amt) => {
-        return amt === 1 ? unit : unit + "s";
-    }
+    document.getElementById("now").innerText = now.toDateString();
 </script>

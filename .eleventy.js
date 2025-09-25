@@ -38,8 +38,8 @@ export default async function (config) {
             month: "short",
             day: "numeric",
         };
-        return date.toLocaleString("en-US", options).replace(/,/g, "");
-    })
+        return date.toLocaleString("en-US", options);
+    });
     
     config.addShortcode("a", function (url, text) {
         const metadata = 'class="ext-link" target="_blank" rel="noopener noreferrer"';
