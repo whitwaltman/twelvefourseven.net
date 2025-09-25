@@ -5,9 +5,44 @@ layout: layouts/base.njk
     This is a page to display countdowns to events in my life.
     It gives me something to look forward to and helps me conceptualize the passage of time.
 </p>
-<p>As of <span id="now"></span></p>
+<p>
+    A minimal amount of JavaScript is used in order to display the countdown.
+    To see an updated countdown, refresh this page.
+</p>
+
+{% for item in countdown %}
+    <p class="countdown"
+        data-target="{{ item.when }}"
+        data-what="{{ item.what }}">
+        Loading countdown until {{ item.what }}...
+    </p>
+{% endfor %}
 
 <script>
-    const now = new Date();
-    document.getElementById("now").innerText = now.toDateString();
+    const updateCountdown = el => {
+        const then = new Date(el.dataset.target);
+        const now = new Date();
+        const diff = then - now;
+
+        if (diff < 0) {
+            el.classList.add('expired');
+            el.textContent = `This used to display a countdown for `
+                + `the number of days until ${el.dataset.what}. `
+                + `This countdown has ended.`;
+            return;
+        }
+
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor(diff / (1000 * 60 * 60)) % 24;
+        const m = Math.floor(diff / (1000 * 60)) % 60;
+
+        el.textContent = `There are ${d} ${d === 1 ? "day" : "days"}, `
+            + `${h} ${h === 1 ? "hour" : "hours"}, and `
+            + `${m} ${m === 1 ? "minute" : "minutes"} `
+            + `until ${el.dataset.what}.`;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".countdown").forEach(updateCountdown);
+    });
 </script>

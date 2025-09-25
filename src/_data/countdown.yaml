@@ -1,6 +1,6 @@
-- date: 2025-10-15T14:05:00.000Z
-  for: I arrive in PA for bday visit
+- when: 2025-10-15T14:05:00.000Z
+  what: I arrive in PA for bday visit
   fmtd: Wed Oct 15 2025 07:05:00 GMT-0700 (Pacific Daylight Time)
-- date: 2025-08-05T00:27:00Z
-  for: I arrive in PA for 2 week visit
+- when: 2025-08-05T00:27:00Z
+  what: I arrive in PA for 2 week visit
   fmtd: 'Mon Aug 04 2025 17:27:00 GMT-0700 (Pacific Daylight Time)'

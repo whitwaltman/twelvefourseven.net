@@ -22,7 +22,7 @@
         @apply font-bold;
     }
     
-    .update {
+    .update, .countdown {
         @apply mt-8 border-2 p-2;
     }
 
@@ -41,7 +41,7 @@
         list-style-type: lower-roman;
     }
 
-    .then {
+    .then, .expired {
         @apply bg-neutral-200;
     }
 }
