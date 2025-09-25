@@ -5,11 +5,34 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    h1, h2, h3, h4, h5, h6, ul, ol {
+    h1, h2, h3, h4, h5, h6 {
         all: revert;
     }
 
     p + p {
         @apply pt-2;
+    }
+
+    .ext-link {
+        @apply text-blue-700 underline;
+    }
+    
+    .update {
+        @apply mt-8 border-2 p-2;
+    }
+
+    .update > .status-bar {
+        @apply flex flex-row justify-between;
+        @apply text-sm font-mono;
+        @apply pb-1.5 mb-1 border-b-2;
+    }
+
+    .update ul {
+        @apply px-6 py-1;
+    }
+
+    .update li {
+        @apply px-1;
+        list-style-type: lower-roman;
     }
 }

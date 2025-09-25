@@ -1,16 +1,24 @@
 ---
 layout: layouts/base.njk
 ---
-<h1>Now</h1>
-<p>Here's what I'm up to right now</p>
+<p>
+    This is a <strong>now</strong> page. It's a way for me to share what I'm focused on
+    at this point in my life. My focus can often shift, so it's helpful
+    for me to keep track of what I'm doing and thinking about.
+</p>
+<p>
+    If you have your own site, you should consider
+    {% a "https://nownownow.com/about", "adding a now page" %}.
+</p>
 
-<p>{{ site.title }} + {{ site.author }}</p>
-
-{% for entry in now %}
-<p>{{ entry.date }}</p>
-<ul>
-    {% for bullet in entry.content %}
+<div class="update">
+    <div class="status-bar">
+        <span>NOW</span>
+        <span class="text-neutral-400">Updated {{ now[0].date | simpleDate }}</span>
+    </div>
+    <ul>
+        {% for bullet in now[0].content %}
         <li>{{ bullet }}</li>
-    {% endfor %}
-</ul>
-{% endfor %}
+        {% endfor %}
+    </ul>
+</div>

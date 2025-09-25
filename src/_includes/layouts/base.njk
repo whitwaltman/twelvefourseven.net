@@ -2,6 +2,9 @@
 layout: layouts/html.njk
 ---
 {% include "header.njk" %}
-<main class="px-3 py-1.5 flex-1">
+<main class="px-3 py-1.5 flex-1 max-w-xl">
     {{ content | safe }}
 </main>
+<footer class="px-3 py-1.5">
+    <p class="text-xs text-neutral-600">Last built at: {{ metadata.builtAt }}</p>
+</footer>

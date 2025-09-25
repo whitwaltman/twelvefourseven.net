@@ -29,6 +29,17 @@ export default async function (config) {
     config.addDataExtension("yaml", (contents) => {
         return yaml.load(contents)
     });
+
+    config.addFilter("simpleDate", (dateString) => {
+        const date = new Date(dateString);
+        const options = {
+            weekday: "short",
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+        };
+        return date.toLocaleString("en-US", options).replace(/,/g, "");
+    })
     
     config.addShortcode("a", function (url, text) {
         return `<a class="ext-link" target="_blank" rel="noopener noreferrer"
