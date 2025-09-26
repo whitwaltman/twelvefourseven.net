@@ -16,10 +16,18 @@ layout: layouts/base.njk
 </p>
 <p>
     I'm not the best writer, and I often struggle to talk about or describe myself, so please forgive the brevity.
-    There will be more to come soon here, but for now, you can find me elsewhere on the internet (see below) or write to me
+    There'll be more stuff here soon, but for now, you can find me elsewhere on the internet (see below) or write to me
     at <code>whitwaltman[dot]mailbox[dot]org</code>.
+</p>
+<p>
+    Thanks for stopping by.
 </p>
 <h2 class="font-medium">elsewhere</h2>
 <ul>
-    <li></li>
+    {% for item in elsewhere %}
+    <li>
+        <a class="ext-link" target="_blank" rel="noopener" href="{{ item.location }}">
+            {{ item.place }}<span>&nearrow;</span></a>
+    </li>
+    {% endfor %}
 </ul>
