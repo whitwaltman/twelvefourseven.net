@@ -1,33 +1,29 @@
----
-layout: layouts/base.njk
----
+<p>Hi, I'm Whit Waltman.</p>
 <p>
-    Hi, I'm whit waltman. Okay, that's not my actual name.
+... Okay, that's not my actual name.
     But it's one I feel at home in. It's a {% a "https://en.wikipedia.org/wiki/Spoonerism", "spoonerism" %}
     of the name of {% a "https://en.wikipedia.org/wiki/Walt_Whitman", "an American poet" %}.
-</p>
-<p>
-    I've been a fan of puzzles my whole life, and as I've grown older, I've developed a deep fondness for language and wordplay.
-    This is a small way for me to pay homage to that, as well as make a subtle nod to my queerness.
 </p>
 <p>
     This is my website. It used to look different. Now it looks like this.
     I suspect it will continue to morph and evolve for as long as it remains on the web.
 </p>
 <p>
-    I'm not the best writer, and I often struggle to talk about or describe myself, so please forgive the brevity.
-    There'll be more stuff here soon, but for now, you can find me elsewhere on the internet (see below) or write to me
-    at <code>whitwaltman[at]mailbox[dot]org</code>.
+    There'll be more stuff here soon, I hope. For now, you can find me elsewhere on the internet (see below) or you can write to me
+    at <code class="text-sm">whitwaltman[at]mailbox[dot]org</code>
 </p>
-<p>
-    Thanks for stopping by.
-</p>
-<h2 class="font-medium">elsewhere</h2>
-<ul>
-    {% for item in elsewhere %}
-    <li>
-        <a class="ext-link" target="_blank" rel="noopener" href="{{ item.location }}">
-            {{ item.place }}<span>&nearrow;</span></a>
-    </li>
-    {% endfor %}
-</ul>
+<p>Thanks for stopping by.</p>
+<div class="flex flex-row justify-between">
+    <div>
+        <h2 class="font-medium">elsewhere</h2>
+        <ul>
+            {% for item in elsewhere %}
+            <li>
+                <a class="ext-link" target="_blank" rel="noopener" href="{{ item.location }}">
+                    {{ item.place }}<span>&nearrow;</span></a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <img src="img/me.jpg" class="max-w-1/2" alt="a pic of me">
+</div>
