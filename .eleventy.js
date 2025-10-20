@@ -1,10 +1,16 @@
 import fs from 'fs';
 import path from 'path';
+import yaml from 'js-yaml';
 import postcss from 'postcss';
 import tailwindcss from '@tailwindcss/postcss';
-import yaml from "js-yaml";
+import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 
 export default async function (config) {
+    // Copy `img/` to `_site/img`
+    config.addPassthroughCopy('img');
+
+    // Before eleventy build, process css using postcss + tailwind
+    // Copy processor results to `_site/css/main.css`
     config.on('eleventy.before', async () => {
         const inputPath = path.resolve('./src/css/main.css');
         const outputPath = path.resolve('./_site/css/main.css');
@@ -22,25 +28,17 @@ export default async function (config) {
         fs.writeFileSync(outputPath, result.css);
     })
 
+    // Create processor object
     const processor = postcss([
         tailwindcss(),
     ]);
 
+    // Set up YAML parsing
     config.addDataExtension("yaml", (contents) => {
         return yaml.load(contents)
     });
-
-    config.addFilter("simpleDate", (dateString) => {
-        const date = new Date(dateString);
-        const options = {
-            weekday: "short",
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-        };
-        return date.toLocaleString("en-US", options);
-    });
     
+    // Create shortcode for creating styled external links
     config.addShortcode("a", function (url, text) {
         const metadata = 'class="ext-link" target="_blank" rel="noopener noreferrer"';
         return `<a ${metadata} href="${url}">${text}<span>&nearrow;</span></a>`;
