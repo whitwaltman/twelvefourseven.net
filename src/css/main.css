@@ -13,6 +13,10 @@
         @apply pt-4;
     }
 
+    blockquote, hr {
+        @apply pb-4;
+    }
+
     .ext-link {
         @apply text-blue-700 underline;
     }
