@@ -62,7 +62,7 @@ export default async function (config) {
 
     // Set up YAML parsing
     config.addDataExtension('yaml', (contents) => {
-        return yaml.load(contents)
+        return yaml.load(contents);
     });
     
     // Create shortcode for creating styled external links

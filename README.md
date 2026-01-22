@@ -4,16 +4,7 @@ This is the repository for my personal website. It's built using Eleventy and Ta
 
 ## build and deploy
 
-1. `npm run build:all`
-2. `./utils/deploy.sh` (optional `--delete` flag available)
-
-### `build:all`
-
-This command handles all the build tasks for a clean, formatted build. Specifically, it runs the following 3 commands:
-
-1. `rm -rf _site`
-2. `npx eleventy`
-3. `node utils/format.js`
+Used to deploy to an OpenBSD server; now using Cloudflare Pages.
 
 ## countdown notes
 
