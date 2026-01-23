@@ -6,10 +6,10 @@ npm-debug.*
 .DS_Store
 .sass-cache
 .env
-.cache
 
 # node
 node_modules
 
 # output
 _site
+.cache

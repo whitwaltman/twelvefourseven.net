@@ -15,7 +15,7 @@ export default async function (config) {
     // Before eleventy build, process css using postcss + tailwind
     // Copy processor results to `_site/css/main.css`
     config.on('eleventy.before', async () => {
-        const inputPath = path.resolve('./src/css/main.css');
+        const inputPath = path.resolve('./css/main.css');
         const outputPath = path.resolve('./_site/css/main.css');
         const cssContent = fs.readFileSync(inputPath, 'utf8');
 
@@ -79,7 +79,9 @@ export default async function (config) {
         dataTemplateEngine: 'njk',
         htmlTemplateEngine: 'njk',
         dir: {
-            input: 'src',
+            input: '.',
+            includes: '_includes',
+            data: '_data',
             output: '_site',
         }
     };
