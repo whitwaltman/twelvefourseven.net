@@ -10,7 +10,7 @@ export default async function (config) {
     config.addPassthroughCopy('img');
 
     // Add global default layout
-    config.addGlobalData('layout', 'layouts/base.njk');
+    config.addGlobalData('layout', 'base.njk');
 
     // Before eleventy build, process css using postcss + tailwind
     // Copy processor results to `_site/css/main.css`

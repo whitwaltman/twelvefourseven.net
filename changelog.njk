@@ -1,0 +1,12 @@
+<p>
+    This is my changelog. <s>I don't know why it's not rendering.</s> yes I do. I didn't name the file right.
+</p>
+
+{% for log in changelog %}
+<time>{{ log.date }}</time>
+<ul>
+    {% for change in log.changes %}
+    <li>{{ change }}</li>
+    {% endfor %}
+</ul>
+{% endfor %}
