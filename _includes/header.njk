@@ -1,9 +1,9 @@
 <header>
-    <span class="{{ 'bg-lime-300' if 'index' in page.filePathStem }}">
-        <a href="/">xii.iv.vii</a></span>:
-    <span class="{{ 'bg-lime-300' if 'now' === page.fileSlug }}">
-        <a href="/now">now</a></span>
-    <a href="/notes">notes</a>
-    <span class="{{ 'bg-lime-300' if 'changelog' === page.fileSlug }}">
-        <a href="/changelog">changelog</a></span>
+    <a href="/" class="{{ 'curr' if 'index' in page.filePathStem }}">xii.iv.vii</a>:
+
+    <a href="/now" class="{{ 'curr' if 'now' in page.filePathStem }}">now</a>
+
+    <a href="/notes" class="{{ 'curr' if 'notes' in page.filePathStem }}">notes</a>
+
+    <a href="/changelog" class="{{ 'curr' if 'changelog' in page.filePathStem }}">changelog</a>
 </header>

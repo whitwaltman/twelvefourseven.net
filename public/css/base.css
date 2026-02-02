@@ -28,3 +28,12 @@ main {
 footer {
     flex: 0 0 auto;
 }
+
+header a {
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+header a.curr {
+    background: var(--accent);
+}

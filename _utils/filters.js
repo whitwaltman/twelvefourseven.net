@@ -1,8 +1,8 @@
 const filters = {
-    fmtdDate: (dateObj) => {
+    fmtDate: (dateObj) => {
         return dateObj.toDateString();
     },
-    fmtdTime: (dateObj) => {
+    fmtTime: (dateObj) => {
         return dateObj.toLocaleTimeString("en-US", { timeZone: "UTC" });
     }
 }
