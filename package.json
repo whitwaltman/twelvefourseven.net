@@ -5,6 +5,7 @@
   "scripts": {
     "build": "npx eleventy",
     "build:all": "rm -rf _site && npx eleventy && node _utils/format.js",
+    "clean": "rm -rf _site",
     "debug": "DEBUG=* npx eleventy",
     "format": "node _utils/format.js",
     "start": "npx eleventy --serve"

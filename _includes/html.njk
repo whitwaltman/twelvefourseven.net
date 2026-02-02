@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="{{ eleventy.generator }}">
     <title>{{ site.title }}</title>
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    {% set css %}{% include "public/css/base.css" %}{% endset %}
+    <style>
+        {{ css | safe }}
+    </style>
 </head>
 <body class="flex flex-col min-h-screen justify-between">
     {{ content | safe }}
