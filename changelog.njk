@@ -1,12 +1,27 @@
+<style>
+
+</style>
 <p>
-    This is my changelog. <s>I don't know why it's not rendering.</s> yes I do. I didn't name the file right.
+    This is my changelog. I kind of treat it like a mini-microblog that's only about this website.
+    I like keeping records of what I was thinking or why I made a certain decision. They're nice to look back on.
 </p>
 
-{% for log in changelog %}
-<time>{{ log.date }}</time>
-<ul>
-    {% for change in log.changes %}
-    <li>{{ change }}</li>
-    {% endfor %}
-</ul>
-{% endfor %}
+<!-- add button to expand / collapse all ?? -->
+<!-- OR only allow one entry to be expanded at a time -->
+
+<section class="entry">
+    <time>2026-01-31T23:08:18</time>
+    <p>I removed /countdown. End of a short-lived era. Re-purposed into <a href="https://until.twelvefourseven.net" class="ext-link" target="_blank">until.twelvefourseven.net</a></p>
+    <!-- show entry summary; expand to see personal reflection / note -->
+    <p>
+        I liked having the countdown page as something to continually check up on, but it felt stifling and narrow in practice.
+        I only really used it to count down to my visits to see my girlfriend, so it felt like it was being underutilized as both web and mental "space" for me.
+        That probably doesn't make any sense but oh well. No one probably reads these anyways.
+    </p>
+    <p>
+        I was able to repurpose some of the logic from the countdown page, but I also spruced it up a decent amount with SVGs and fancy styling.
+        While it now only displays one countdown at a time (for now, at least), the design is much more vibrant and fun. I have ideas for more little things to add, but in its current state, it's a finished website.
+    </p>
+</section>
+
+
