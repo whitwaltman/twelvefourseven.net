@@ -1,0 +1,4 @@
+{% for note in collections.notes %}
+<a href="{{ note.url }}">{{ note.fileSlug }}</a>
+{{ note.date }}
+{% endfor %}

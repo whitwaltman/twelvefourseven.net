@@ -1,5 +1,4 @@
 import fs from 'fs';
-import path from 'path';
 import yaml from 'js-yaml';
 import filters from './_utils/filters.js';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
@@ -16,6 +15,11 @@ export default async function (config) {
     // Register filters (h/t Chase McCoy)
     Object.keys(filters).forEach((filter) => {
         config.addFilter(filter, filters[filter]);
+    });
+
+    // Add notes collection
+    config.addCollection("notes", (collection) => {
+        return collection.getFilteredByGlob("notes/*.md");
     });
 
     // Add image transformer plugin with specified configuration

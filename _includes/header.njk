@@ -1,8 +1,9 @@
-<header class="text-3xl px-3 py-1.5 mb-4">
+<header>
     <span class="{{ 'bg-lime-300' if 'index' in page.filePathStem }}">
         <a href="/">xii.iv.vii</a></span>:
-    <span class="{{ 'bg-lime-300' if 'changelog' === page.fileSlug }}">
-        <a href="/changelog">changelog</a></span>
     <span class="{{ 'bg-lime-300' if 'now' === page.fileSlug }}">
         <a href="/now">now</a></span>
+    <a href="/notes">notes</a>
+    <span class="{{ 'bg-lime-300' if 'changelog' === page.fileSlug }}">
+        <a href="/changelog">changelog</a></span>
 </header>
