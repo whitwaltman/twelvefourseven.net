@@ -3,6 +3,7 @@ import path from 'path';
 import yaml from 'js-yaml';
 import postcss from 'postcss';
 import tailwindcss from '@tailwindcss/postcss';
+import filters from './_utils/filters.js';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 
 export default async function (config) {
@@ -11,6 +12,11 @@ export default async function (config) {
 
     // Add global default layout
     config.addGlobalData('layout', 'base.njk');
+
+    // Register filters (h/t Chase McCoy)
+    Object.keys(filters).forEach((filter) => {
+        config.addFilter(filter, filters[filter]);
+    });
 
     // Before eleventy build, process css using postcss + tailwind
     // Copy processor results to `_site/css/main.css`

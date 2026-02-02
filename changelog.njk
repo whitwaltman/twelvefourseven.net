@@ -3,7 +3,7 @@
 </p>
 {% for log in changelog %}
 <div class="mt-8 border-2 p-2">
-    <time>{{ log.date }}</time>
+    <p><time>{{ log.date | fmtdDate }}</time> at <time>{{ log.date | fmtdTime }}</time></p>
     <ul>
         {% for change in log.changes %}
         <li>{{ change }}</li>

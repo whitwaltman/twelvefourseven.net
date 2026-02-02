@@ -4,9 +4,9 @@
   "main": ".eleventy.js",
   "scripts": {
     "build": "npx eleventy",
-    "build:all": "rm -rf _site && npx eleventy && node utils/format.js",
+    "build:all": "rm -rf _site && npx eleventy && node _utils/format.js",
     "debug": "DEBUG=* npx eleventy",
-    "format": "node utils/format.js",
+    "format": "node _utils/format.js",
     "start": "npx eleventy --serve"
   },
   "keywords": [],
