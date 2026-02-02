@@ -18,14 +18,11 @@
     "origin": "git@github.alt:whitwaltman/twelvefourseven.net.git"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.1.0",
-    "tailwindcss": "^4.1.13"
+    "@11ty/eleventy": "^3.1.0"
   },
   "devDependencies": {
     "@11ty/eleventy-img": "^6.0.4",
-    "@tailwindcss/postcss": "^4.1.13",
     "js-yaml": "^4.1.0",
-    "postcss": "^8.5.6",
     "prettier": "^3.6.1"
   },
   "type": "module"

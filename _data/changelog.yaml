@@ -2,6 +2,7 @@
   changes:
     - remove /countdown page (migrated to until.twelvefourseven.net)
     - add minimal changelog
+    - remove tailwindcss
   version: v2.0.0
 - date: 2026-02-01T18:24:11Z
   changes:
