@@ -3,7 +3,6 @@
     --accent: oklch(89.7% 0.196 126.665);
 }
 
-
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
@@ -13,27 +12,36 @@ body {
     flex-direction: column;
 }
 
-header, main, footer {
-    padding: 0 1rem;
-}
-
 header {
+    padding: 1rem 1rem;
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
+    line-height: 1;
     flex: 0 0 auto;
-}
-
-main {
-    flex-grow: 1;
-}
-
-footer {
-    flex: 0 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
 }
 
 header a {
-    font-size: 1.5rem;
+    color: black;
     text-decoration: none;
 }
 
 header a.curr {
     background: var(--accent);
+}
+
+img {
+    max-width: 30vw;
+    height: auto;
+}
+
+main {
+    padding: 0 1rem;
+    flex-grow: 1;
+}
+
+footer {
+    padding: 0 1rem;
+    flex: 0 0 auto;
 }
