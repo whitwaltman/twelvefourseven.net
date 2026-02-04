@@ -1,14 +1,17 @@
+---
+title: changelog
+---
 <p>
     This is my changelog. It's got some gaps in it, but it mostly chronicles updates that I've made to this website.
 </p>
 {% for log in changelog %}
-<div class="mt-8 border-2 p-2">
+<div>
     <p><time>{{ log.date | fmtDate }}</time> at <time>{{ log.date | fmtTime }}</time></p>
     <ul>
         {% for change in log.changes %}
         <li>{{ change }}</li>
         {% endfor %}
     </ul>
-    <a href="{{ site.repo }}/releases/tag/{{ log.version }}" target="_blank" class="ext-link">{{ log.version }}</a>
+    <a href="{{ site.repo }}/releases/tag/{{ log.version }}">{{ log.version }}</a>
 </div>
 {% endfor %}

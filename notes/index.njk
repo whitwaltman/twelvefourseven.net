@@ -1,4 +1,8 @@
+<ul>
 {% for note in collections.notes %}
-<a href="{{ note.url }}">{{ note.fileSlug }}</a>
-{{ note.date | fmtDate }}
+    <li>
+        <a href="{{ note.url }}">{{ note.data.title | default(note.fileSlug) }}</a>
+        {{ note.date | fmtDate }}
+    </li>
 {% endfor %}
+</ul>

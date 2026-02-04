@@ -1,10 +1,13 @@
+---
+title: now
+---
 <p>
     This is a /now page. It's a way for me to share what I'm focused on
     at this point in my life. My focus can often shift, so it's helpful
     for me to keep track of what I'm doing and thinking about.
 </p>
 <p>
-    If you have your own site, you should consider {% a "https://nownownow.com/about", "adding a now page" %}.
+    If you have your own site, you should consider <a href="https://nownownow.com/about">adding a now page</a>.
 </p>
 
 {% for i in range(0, now.length) %}
@@ -12,10 +15,10 @@
     <div class="status-bar">
         {% if i == 0 %}
         <span>NOW</span>
-        <span class="date text-neutral-400">Updated {{ now[i].date | fmtDate }}</span>
+        <span>Updated {{ now[i].date | fmtDate }}</span>
         {% else %}
         <span>THEN</span>
-        <span class="date text-neutral-500">{{ now[i].date | fmtDate }}</span>
+        <span>{{ now[i].date | fmtDate }}</span>
         {% endif %}
     </div>
     <ul>
