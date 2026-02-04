@@ -19,8 +19,7 @@
         <ul>
             {% for item in elsewhere %}
             <li>
-                <a class="ext-link" target="_blank" rel="noopener" href="{{ item.location }}">
-                    {{ item.place }}<span>&nearrow;</span></a>
+                <a href="{{ item.location }}">{{ item.place }}</a>
             </li>
             {% endfor %}
         </ul>

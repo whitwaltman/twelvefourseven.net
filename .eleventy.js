@@ -1,6 +1,7 @@
 import fs from 'fs';
 import yaml from 'js-yaml';
 import filters from './_utils/filters.js';
+import transformExternalLinks from './_utils/links.js';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 
 export default async function (config) {
@@ -16,6 +17,9 @@ export default async function (config) {
     Object.keys(filters).forEach((filter) => {
         config.addFilter(filter, filters[filter]);
     });
+
+    // Register imported links function as a transform
+    config.addTransform("externalLinks", transformExternalLinks);
 
     // Add notes collection
     config.addCollection("notes", (collection) => {
