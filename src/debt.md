@@ -3,7 +3,7 @@ title: Debt
 created: 2026-02-08T11:50:03Z
 updated:
 layout: note.njk
-permalink: /debt/
+preview: 
 type: working note
 tags:
 - economics
