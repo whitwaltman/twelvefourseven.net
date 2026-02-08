@@ -8,6 +8,8 @@
     "clean": "rm -rf _site",
     "debug": "DEBUG=* npx eleventy",
     "format": "node _utils/format.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "start": "npx eleventy --serve"
   },
   "keywords": [],
@@ -23,6 +25,8 @@
   },
   "devDependencies": {
     "@11ty/eleventy-img": "^6.0.4",
+    "eslint": "^10.0.0",
+    "globals": "^17.3.0",
     "js-yaml": "^4.1.0",
     "linkedom": "^0.18.12",
     "prettier": "^3.6.1"
