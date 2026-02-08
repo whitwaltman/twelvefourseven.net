@@ -5,7 +5,7 @@
     {% if page.url !== "/" %}
     <li>
         <a href="{{ page.url }}">{{ page.fileSlug }}</a>
-        <p>{{ page.data.page.excerpt }}</p>
+        <p>{{ page.data.preview }}</p>
     </li>
     {% endif %}
     {% endfor %}

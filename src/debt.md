@@ -1,7 +1,7 @@
 ---
 created: 2026-02-08T11:50:03Z
 updated:
-preview: 
+preview: Misc. notes on the function of debt
 type: working note
 tags:
 - economics
@@ -10,8 +10,6 @@ tags:
 Disclaimers:
 - I know very little about economics, like much less than I probably should
 - I will probably get things wrong and misunderstand concepts and ideas
-
-<!-- excerpt -->
 
 From a conversation I had with J yesterday morning:
 - the function of national debt

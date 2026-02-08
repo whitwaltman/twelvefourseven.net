@@ -44,4 +44,5 @@ main {
 footer {
     padding: 0 1rem;
     flex: 0 0 auto;
+    font-size: 85%;
 }
