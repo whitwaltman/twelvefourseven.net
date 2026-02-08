@@ -12,23 +12,9 @@ body {
     flex-direction: column;
 }
 
-header {
-    padding: 1rem 1rem;
-    font-size: clamp(1.4rem, 3.5vw, 2rem);
-    line-height: 1;
+.site__header {
+    padding: 0 1rem;
     flex: 0 0 auto;
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-}
-
-header a {
-    color: black;
-    text-decoration: none;
-}
-
-header a.curr {
-    background: var(--accent);
 }
 
 img {

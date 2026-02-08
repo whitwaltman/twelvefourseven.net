@@ -13,12 +13,6 @@ export default async function (config) {
 	// Add global default layout
 	config.addGlobalData("layout", "base.njk");
 
-	// Parse excerpts from content
-	config.setFrontMatterParsingOptions({
-		excerpt: true,
-		excerpt_separator: "<!-- excerpt -->",
-	});
-
 	// Register filters (h/t Chase McCoy)
 	Object.keys(filters).forEach((filter) => {
 		config.addFilter(filter, filters[filter]);
