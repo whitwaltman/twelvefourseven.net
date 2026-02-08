@@ -7,3 +7,6 @@ layout: base.njk
 {{ content | safe }}
 
 <p>{{ page.date }}</p>
+{% if updated %}
+<p>Updated on {{ updated }}</p>
+{% endif %}
