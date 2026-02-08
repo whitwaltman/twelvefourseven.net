@@ -1,8 +1,6 @@
 ---
-title: Debt
 created: 2026-02-08T11:50:03Z
 updated:
-layout: note.njk
 preview: 
 type: working note
 tags:
