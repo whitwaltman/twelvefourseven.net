@@ -1,12 +1,16 @@
 ---
 layout: base.njk
 ---
-<p>You are viewing a note</p>
-<h1>{{ title }}</h1>
-
-{{ content | safe }}
-
-<p>{{ page.date }}</p>
-{% if updated %}
-<p>Updated on {{ updated }}</p>
-{% endif %}
+<article>
+    <header>
+        <h1>{{ title }}</h1>
+        <div style="display: flex; flex-direction: row; gap: 1em; font-size: 90%;">
+            <time>{{ page.date }}</time>
+            {% if updated %}
+            <span>Updated on <time>{{ updated }}</time></span>
+            {% endif %}
+        </div>
+        <p style="font-size: 95%; font-style: italic;">{{ preview }}</p>
+    </header>
+    {{ content | safe }}
+</article>
