@@ -2,7 +2,8 @@
 layout: base.njk
 ---
 <p>You are viewing a note</p>
+<h1>{{ title }}</h1>
 
 {{ content | safe }}
 
-Updated at <time>{{ page.date }}</time>
+Created at <time>{{ created }}</time>
