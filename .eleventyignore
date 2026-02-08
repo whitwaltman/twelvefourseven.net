@@ -1,5 +1,6 @@
 _site/
 _utils/
 .cache/
+.ignore/
 node_modules/
 README.md
