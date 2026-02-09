@@ -6,11 +6,12 @@
     "build": "npx eleventy",
     "build:all": "npm run clean && npm run build && npm run format",
     "clean": "rm -rf _site",
+    "dates": "node _utils/backfill.js",
     "debug": "DEBUG=* npx eleventy",
     "format": "node _utils/format.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "start": "npx eleventy --serve --incremental",
+    "start": "npm run dates && npx eleventy --serve --incremental",
     "serve": "npx eleventy --serve",
     "prepare": "husky"
   },

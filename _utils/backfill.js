@@ -14,21 +14,20 @@ async function backfill(dir) {
         const fileContent = fs.readFileSync(fp, "utf8");
         const { data, content } = matter(fileContent);
 
-        if (!data.date) {
-            try {
-                const initCommit = execSync(`git log --diff-filter=A --format=%aI -- "${fp}" | tail -1`)
-                                    .toString().trim();
-                if (initCommit) {
-                    const cleanDate = initCommit.split("T")[0];
-                    data.date = `${cleanDate}T12:00:00Z`;
+        if (data.date) return;
 
-                    const updatedContent = matter.stringify(content, data);
-                    fs.writeFileSync(fp, updatedContent);
-                    console.log(`Stamped ${file} with ${cleanDate}`);
-                }
-            } catch (e) {
-                console.log(`Could not find git history for ${file}, skipping`);
-            }
+        try {
+            const first = execSync(`git log --diff-filter=A --format=%aI -- "${fp}" | tail -1`).toString().trim();
+
+            const cleanDate = first ? first.split("T")[0] : new Date().toISOString().split("T")[0];
+            data.date = `${cleanDate}T12:00:00Z`;
+
+            const updatedContent = matter.stringify(content, data);
+            fs.writeFileSync(fp, updatedContent);
+
+            console.log(`Stamped ${file} -> ${cleanDate}`);
+        } catch (e) {
+            console.log(`Could not find git history for ${file}, skipping`);
         }
     });
 }
