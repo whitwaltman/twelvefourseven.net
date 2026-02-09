@@ -10,7 +10,8 @@
     "format": "node _utils/format.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "start": "npx eleventy --serve"
+    "start": "npx eleventy --serve --incremental",
+    "serve": "npx eleventy --serve"
   },
   "keywords": [],
   "author": "whitwaltman",
@@ -27,6 +28,7 @@
     "@11ty/eleventy-img": "^6.0.4",
     "eslint": "^10.0.0",
     "globals": "^17.3.0",
+    "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
     "linkedom": "^0.18.12",
     "prettier": "^3.6.1"

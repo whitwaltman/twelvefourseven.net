@@ -5,6 +5,10 @@ import transformExternalLinks from "./_utils/links.js";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 export default async function (config) {
+	// Add global data variable to signal build modality
+	const isProduction = process.env.NODE_ENV === "production";
+	config.addGlobalData("isProduction", isProduction);
+
 	// Copy public assets
 	config.addPassthroughCopy({
 		"./public": "/",
@@ -21,16 +25,11 @@ export default async function (config) {
 	// Register imported links function as a transform
 	config.addTransform("externalLinks", transformExternalLinks);
 
-	// Add notes collection
-	config.addCollection("notes", (collection) => {
-		return collection.getFilteredByGlob("notes/*.md");
-	});
-
 	// Add image transformer plugin with specified configuration
 	config.addPlugin(eleventyImageTransformPlugin, {
-		urlPath: "./img",
-		outputDir: ".cache/@11ty/img/",
-		failOnError: false,
+		urlPath: "/img/",
+		outputDir: "_site/img/",
+		failOnError: true,
 		formats: ["webp"],
 		widths: [720],
 		htmlOptions: {
@@ -41,24 +40,9 @@ export default async function (config) {
 		},
 	});
 
-	// Cache image transformer results
-	config.on("eleventy.after", () => {
-		const cacheDir = ".cache/@11ty/img";
-		if (!fs.existsSync(cacheDir)) {
-			fs.mkdirSync(cacheDir, { recursive: true });
-		}
-		fs.cpSync(cacheDir, "_site/img", { recursive: true });
-	});
-
 	// Set up YAML parsing
 	config.addDataExtension("yaml", (contents) => {
 		return yaml.load(contents);
-	});
-    
-	// Create shortcode for creating styled external links
-	config.addShortcode("a", function (url, text) {
-		const metadata = "class=\"ext-link\" target=\"_blank\" rel=\"noopener noreferrer\"";
-		return `<a ${metadata} href="${url}">${text}<span>&nearrow;</span></a>`;
 	});
 
 	// Specify server port

@@ -12,9 +12,25 @@ body {
     flex-direction: column;
 }
 
-.site__header {
+.header {
     padding: 0 1rem;
     flex: 0 0 auto;
+}
+
+.header__title {
+    margin: 0;
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
+    font-weight: 500;
+}
+
+.header__link {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.header__link:hover {
+    background: var(--accent);
 }
 
 img {
