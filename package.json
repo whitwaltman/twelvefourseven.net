@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": ".eleventy.js",
   "scripts": {
-    "build": "npx eleventy",
-    "build:all": "rm -rf _site && npx eleventy && node _utils/format.js",
+    "build": "npm run dates && npx eleventy",
+    "build:all": "npm run clean && npm run build && npm run format",
     "clean": "rm -rf _site",
+    "dates": "node _utils/updated.js",
     "debug": "DEBUG=* npx eleventy",
     "format": "node _utils/format.js",
     "lint": "eslint .",
