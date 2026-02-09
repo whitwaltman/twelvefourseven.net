@@ -1,4 +1,3 @@
-import fs from "fs";
 import yaml from "js-yaml";
 import filters from "./_utils/filters.js";
 import transformExternalLinks from "./_utils/links.js";

@@ -7,8 +7,9 @@ npm-debug.*
 .sass-cache
 .env
 
-# node
-node_modules
+# node stuff
+node_modules/
+.husky/
 
 # output
 _site

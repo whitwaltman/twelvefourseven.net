@@ -9,16 +9,9 @@ export default {
             const slug = data.page.fileSlug.split("-").join(" ");
             return slug[0].toUpperCase() + slug.slice(1);
         },
-        // https://joshtronic.com/2025/07/20/last-modified-date-eleventy/
         updated: (data) => {
-            const stats = fs.statSync(data.page.inputPath);
-            const mtime = stats.mtime;
-
-            const ogDate = new Date(data.page.date).toISOString().split("T")[0];
-            const mDate = new Date(mtime).toISOString().split("T")[0];
-
-            if (mDate !== ogDate) return mtime;
-            return null;
+            const gitDates = require("../_data/gitUpdated.json");
+            return gitDates[data.page.inputPath] || data.page.date;
         }
     }
 }

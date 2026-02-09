@@ -3,16 +3,22 @@
   "version": "1.0.0",
   "main": ".eleventy.js",
   "scripts": {
-    "build": "npm run dates && npx eleventy",
+    "build": "npx eleventy",
     "build:all": "npm run clean && npm run build && npm run format",
     "clean": "rm -rf _site",
-    "dates": "node _utils/updated.js",
     "debug": "DEBUG=* npx eleventy",
     "format": "node _utils/format.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "start": "npx eleventy --serve --incremental",
-    "serve": "npx eleventy --serve"
+    "serve": "npx eleventy --serve",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "src/**/*.md": [
+      "node _utils/updated.js",
+      "git add _data/gitUpdated.json"
+    ]
   },
   "keywords": [],
   "author": "whitwaltman",
@@ -29,9 +35,10 @@
     "@11ty/eleventy-img": "^6.0.4",
     "eslint": "^10.0.0",
     "globals": "^17.3.0",
-    "gray-matter": "^4.0.3",
+    "husky": "^9.1.7",
     "js-yaml": "^4.1.0",
     "linkedom": "^0.18.12",
+    "lint-staged": "^16.2.7",
     "prettier": "^3.6.1"
   },
   "type": "module"
