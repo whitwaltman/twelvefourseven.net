@@ -15,7 +15,7 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "src/**/*.md": [
+    "src/*.md": [
       "node _utils/updated.js",
       "git add _data/gitUpdated.json"
     ]
