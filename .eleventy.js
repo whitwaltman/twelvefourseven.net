@@ -16,7 +16,7 @@ export default async function (config) {
 	// Add global default layout
 	config.addGlobalData("layout", "base.njk");
 
-	// Register filters (h/t Chase McCoy)
+	// Register filter functions
 	Object.keys(filters).forEach((filter) => {
 		config.addFilter(filter, filters[filter]);
 	});
