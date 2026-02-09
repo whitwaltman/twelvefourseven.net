@@ -1,11 +1,9 @@
-<p>This is the internet home of Whit Waltman.</p>
-
-<ul>
+<ul class="index">
     {% for page in collections.all %}
     {% if page.url !== "/" %}
-    <li>
-        <a href="{{ page.url }}">{{ page.fileSlug }}</a>
-        <p>{{ page.data.preview }}</p>
+    <li class="index__item">
+        <a class="index__link" href="{{ page.url }}">{{ page.fileSlug }}</a>
+        <p class="index__description">{{ page.data.preview }}</p>
     </li>
     {% endif %}
     {% endfor %}
