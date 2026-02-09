@@ -1,3 +1,7 @@
+---
+date: '2026-02-08T12:00:00Z'
+---
+
 `ssh vps` -> twelvefourseven.net
 
 `ls -1 | grep "^[a-z]"` -> only lowercase directories

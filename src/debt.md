@@ -1,10 +1,9 @@
 ---
-created: 2026-02-08T11:50:03Z
-updated:
 preview: Misc. notes on the function of debt
 type: working note
 tags:
-- economics
+  - economics
+date: '2026-02-08T12:00:00Z'
 ---
 
 Disclaimers:
