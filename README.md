@@ -2,19 +2,27 @@
 
 This is the repository for my personal website. It's built using Eleventy, a static site generator.
 
-I try my best to use tags to "track" non-trivial updates and version history. As of January 31, 2026, I'm on `v1.0.3`. My versioning system isn't robust or anything, it's mostly based on semver (`major.minor.patch`). In practice, this mostly means:
+This document is mostly written for my future self, to remind me of things I may have forgotten.
+
+## versioning
+
+I try my best to use git tags to "track" non-trivial updates and version history. As of February 9, 2026, I'm on `v1.0.4`.
+
+My versioning system isn't robust or anything, it's mostly based on semver (`major.minor.patch`). In practice, this mostly means:
 
 - `major`: significant visual design and/or information architecture changes
 - `minor`: new pages are added/removed
 - `patch`: content updates to existing pages
 
-## notes to self
+A nice side-effect of this system is that I can download a zipped version of my site as it was at any given version and build it to see what it looked like at that moment in time. This is my first time actually using git tags, so we'll see how this plays out.
 
-- i removed `config.addPassthroughCopy('img');` from the config because it was unnecessarily copying the original image to the build directory
-    - now, the image transformer just takes the input url path and caches the output / copies it to the correct build location
-- in removing tailwind, i've decided to move my css files to `/public/css/`. although, now that i think about it, since i'm copying the whole 'public' folder over, maybe i don't need css in `/public` since i want to inline it...
-    - i'll revisit this decision later
-- `.husky/` file is ignored in git tracking, but the only thing I changed was the contents of `.husky/pre-commit`, which just contains `npx lint-staged`
+## directory structure
+
+Contrary to most Eleventy project setups, I use the root as my input source. I prefer it this way, but I understand why it's not the conventional approach.
+
+The existence of an `src/` directory might be confusing in light of my previous statements, but it helps provide a physical boundary between my writing and *everything else* (configurations, templates, stylesheets, utility scripts, etc). This allows me to open a markdown editor and just **write**, without the distraction and clutter of all the other stuff I need to build this site.
+
+I follow most other conventions (`_data` for global data files, `_includes` for templates and partials, `_site` for build output, etc).
 
 ## _utils
 
@@ -51,3 +59,9 @@ Handles the clean-up from the `updated` utility. Checks the existing metadata ke
 If a file is renamed, I prefer to just manually update the key accordingly, which also avoids a possible scenario in which a renamed file is treated as a new entity.
 
 To run it, it's just `node _utils/prune.js`. It's used pretty sparingly, but it's a helpful utility on the occasions I do actually need it.
+
+### backfill
+
+Script that handles setting creation `date` to avoid fresh clone mishaps. Uses the `gray-matter` package to parse file contents and obtain metadata. If `date` hasn't been set yet, we look for a git history for the file. If there is none, we set date equal to the current date. Otherwise, we use the date of the file's first commit to populate the field.
+
+The backfill script runs on `npm start` in order to ensure that every file has an explicit `date` value. I usually run `npm start` several times before pushing to deploy, so it shouldn't ever need to run outside of my local environment.

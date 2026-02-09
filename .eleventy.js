@@ -8,7 +8,7 @@ export default async function (config) {
 	const isProduction = process.env.NODE_ENV === "production";
 	config.addGlobalData("isProduction", isProduction);
 
-	// Copy public assets
+	// Copy public assets to output folder
 	config.addPassthroughCopy({
 		"./public": "/",
 	});
@@ -26,7 +26,6 @@ export default async function (config) {
 
 	// Add image transformer plugin with specified configuration
 	config.addPlugin(eleventyImageTransformPlugin, {
-		urlPath: "/img/",
 		outputDir: "_site/img/",
 		failOnError: true,
 		formats: ["webp"],
