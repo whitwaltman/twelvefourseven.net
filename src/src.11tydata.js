@@ -10,8 +10,18 @@ export default {
             return slug[0].toUpperCase() + slug.slice(1);
         },
         updated: (data) => {
-            const gitDates = require("../_data/gitUpdated.json");
-            return gitDates[data.page.inputPath] || data.page.date;
+            const normalized = data.page.inputPath.replace(/^\.\//, "");
+
+            const gitDateStr = data.gitUpdated[normalized];
+            if (!gitDateStr) return null;
+
+            const gitDate = new Date(gitDateStr);
+            const pubDate = new Date(data.page.date);
+
+            const diff_ms = gitDate.getTime() - pubDate.getTime();
+            const diff_days = diff_ms / (1000 * 60 * 60 * 24);
+            
+            return diff_days >= 1 ? gitDate : null;
         }
     }
 }
