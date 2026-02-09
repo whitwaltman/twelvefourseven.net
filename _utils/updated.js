@@ -2,10 +2,15 @@ import fs from "fs";
 import path from "path";
 import { execSync } from "child_process";
 
-const contentDir = "./src";
 const outputFile = "./_data/gitUpdated.json";
 
-async function updateMetadata(dir, out) {
+async function updateMetadata(out) {
+    // Ensure output file directory exists
+    const dir = path.dirname(out);
+    if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+    }
+
     // Read existing data or start fresh
     let dates = {};
     if (fs.existsSync(out)) {
@@ -37,4 +42,4 @@ async function updateMetadata(dir, out) {
     console.log(`Git update metadata written to ${out}`);
 }
 
-await updateMetadata(contentDir, outputFile);
+await updateMetadata(outputFile);

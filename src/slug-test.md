@@ -2,4 +2,4 @@
 preview: Testing file slug
 ---
 
-Hi this is a slug test!
+I'm testing the new update hook for retrieving and preserving metadata.
