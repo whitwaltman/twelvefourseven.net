@@ -19,16 +19,21 @@ async function updateMetadata(out) {
 
     // Get files passed by lint-staged
     const files = process.argv.slice(2);
+    // Get current working directory
+    const rt = process.cwd();
     
     files.forEach((fp) => {
         if (fp.endsWith(".md")) {
+            // Convert absolute path to relative path for key usage
+            const rp = path.relative(rt, fp);
+
             try {
                 // Get the ISO date of the last commit for this file
                 const log = execSync(`git log -1 --format=%cI -- "${fp}"`).toString().trim();
                 // Set date or create new one as fallback if new file
-                dates[fp] = log || new Date().toISOString();
+                dates[rp] = log || new Date().toISOString();
             } catch (e) {
-                dates[fp] = new Date().toISOString();
+                dates[rp] = new Date().toISOString();
             }
         }
     });

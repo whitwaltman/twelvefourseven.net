@@ -14,3 +14,4 @@ I try my best to use tags to "track" non-trivial updates and version history. As
     - now, the image transformer just takes the input url path and caches the output / copies it to the correct build location
 - in removing tailwind, i've decided to move my css files to `/public/css/`. although, now that i think about it, since i'm copying the whole 'public' folder over, maybe i don't need css in `/public` since i want to inline it...
     - i'll revisit this decision later
+- `.husky/` file is ignored in git tracking, but the only thing I changed was the contents of `.husky/pre-commit`, which just contains `npx lint-staged`

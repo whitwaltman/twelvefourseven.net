@@ -15,7 +15,7 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "src/*.md": [
+    "src/**/*.md": [
       "node _utils/updated.js",
       "git add _data/gitUpdated.json"
     ]
@@ -29,13 +29,13 @@
     "origin": "git@github.alt:whitwaltman/twelvefourseven.net.git"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.1.0"
+    "@11ty/eleventy": "^3.1.0",
+    "husky": "^9.1.7"
   },
   "devDependencies": {
     "@11ty/eleventy-img": "^6.0.4",
     "eslint": "^10.0.0",
     "globals": "^17.3.0",
-    "husky": "^9.1.7",
     "js-yaml": "^4.1.0",
     "linkedom": "^0.18.12",
     "lint-staged": "^16.2.7",
