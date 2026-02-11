@@ -1,5 +1,3 @@
-import fs from "fs";
-
 export default {
     layout: "note.njk",
     // https://www.11ty.dev/docs/data-computed/

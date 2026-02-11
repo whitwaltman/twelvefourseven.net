@@ -1,5 +1,6 @@
 ---
 date: '2026-02-08T12:00:00Z'
+preview: Useful commands
 ---
 
 `ssh vps` -> twelvefourseven.net
