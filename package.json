@@ -12,7 +12,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "start": "npm run dates && npx eleventy --serve --incremental",
-    "serve": "npx eleventy --serve",
+    "serve": "npx eleventy --serve --incremental",
     "prepare": "husky"
   },
   "lint-staged": {
