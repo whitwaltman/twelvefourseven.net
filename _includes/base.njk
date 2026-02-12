@@ -5,6 +5,4 @@ layout: html.njk
 <main>
     {{ content | safe }}
 </main>
-<footer>
-    <p>Latest build: {{ site.latestBuild }}</p>
-</footer>
+{% include "footer.njk" %}
