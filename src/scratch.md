@@ -1,6 +1,6 @@
 ---
 date: '2026-02-08T12:00:00Z'
-preview: Useful commands
+preview: Useful commands and other stuff I jot down
 ---
 
 `ssh vps` -> twelvefourseven.net

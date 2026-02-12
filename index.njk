@@ -1,16 +1,13 @@
 <h2>table of contents</h2>
-<ul class="index">
+<ul class="toc">
 {% for page in collections.all %}
     {% if page.url !== "/" %}
-    <li class="index__item">
-        <a class="index__link" href="{{ page.url }}">{{ page.fileSlug }}</a>
-        <p class="index__description">{{ page.data.preview }}</p>
+    <li class="toc__item">
+        <a class="toc__link" href="{{ page.url }}">{{ page.fileSlug }}</a>
+        <p class="toc__description">{{ page.data.preview | trim }}</p>
     </li>
     {% endif %}
 {% endfor %}
 </ul>
 
 <img src="/img/me.jpg" alt="pic of me"/>
-
-<p style="color: black;">This is black text</p>
-<p>This is off-black</p>
