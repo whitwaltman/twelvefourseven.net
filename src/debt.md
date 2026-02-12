@@ -1,16 +1,9 @@
 ---
 title: The function of debt
 type: working note
-tags:
-  - economics
 date: '2026-02-08T12:00:00Z'
 ---
 
-Disclaimers:
-- I know very little about economics, like much less than I probably should
-- I will probably get things wrong and misunderstand concepts and ideas
+The idea of credit cards seems kind of silly to me. Intellectually, I understand why they exist and the societal function they provide, but the way the credit system works has always seemed like an unnatural game adults are forced to play.
 
-From a conversation I had with J yesterday morning:
-- the function of national debt
-- why most countries should never fully pay off their debts
-- greece vs. the us (reputation, strength of currency)
+Of course, personal debt and institutional/governmental debt are very different things. 

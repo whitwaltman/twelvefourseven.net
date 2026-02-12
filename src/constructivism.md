@@ -1,5 +1,5 @@
 ---
-title: Notes on Constructivism
+title: Notes on constructivism
 date: '2026-02-12T12:00:00Z'
 type: working note
 ---
