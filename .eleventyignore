@@ -5,3 +5,4 @@ _utils/
 .eslintrc.cjs
 node_modules/
 README.md
+scrap.md
