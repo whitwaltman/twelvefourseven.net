@@ -1,10 +1,9 @@
 <h2 class="f3 lh-copy fw5">Table of contents</h2>
-<ul class="toc list pa0">
+<ul class="toc list ph0 pv2">
 {% for page in collections.all %}
     {% if page.url !== "/" %}
-    <li class="">
-        <a class="link" href="{{ page.url }}">{{ page.fileSlug }}</a>
-        <p class="dib">{{ page.data.preview | trim }}</p>
+    <li class="dib mr1 mb2">
+        <a class="f6 f5-ns b db pa2 link dim dark-gray ba b--black-20" href="{{ page.url }}">{{ page.fileSlug }}</a>
     </li>
     {% endif %}
 {% endfor %}
