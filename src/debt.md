@@ -1,5 +1,5 @@
 ---
-preview: Misc. notes on the function of debt
+title: The function of debt
 type: working note
 tags:
   - economics
