@@ -1,0 +1,3 @@
+.toc > li a:hover {
+    background: var(--color-accent);
+}
