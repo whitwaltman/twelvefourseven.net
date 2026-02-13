@@ -1,5 +1,9 @@
 <footer>
-    <h2>This is the footer</h2>
+    <h2>You've reached the end</h2>
     <span>Latest build: {{ site.latestBuild }}</span>
-    <span> / Testing <a href="/">a link</a></span>
+    <div class="socials">
+        {% for item in socials %}
+        <span><a href="{{ item.location }}">{{ item.place }}</a></span>
+        {% endfor %}
+    </div>
 </footer>

@@ -1,3 +1,7 @@
 .toc > li a:hover {
     background: var(--color-accent);
 }
+
+.socials {
+    padding-block: var(--s0);
+}
