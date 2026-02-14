@@ -1,9 +1,10 @@
 <footer>
     <h2>You've reached the end</h2>
-    <span>Latest build: {{ site.latestBuild }}</span>
-    <div class="socials">
-        {% for item in socials %}
-        <span><a href="{{ item.location }}">{{ item.place }}</a></span>
-        {% endfor %}
+    <div class="footer_content">
+        <span>Latest build: {{ site.latestBuild }}</span>
+        <span>
+            See what I'm up to <a href="/now">/now</a>
+            or take a peek <a href="/colophon">under the hood</a>
+        </span>
     </div>
 </footer>

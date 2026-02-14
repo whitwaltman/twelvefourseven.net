@@ -2,6 +2,9 @@
     background: var(--color-accent);
 }
 
-.socials {
-    padding-block: var(--s0);
+.footer_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
