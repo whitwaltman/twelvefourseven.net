@@ -14,6 +14,7 @@
 
     /* Scale */
     --ratio: 1.25;
+    --sx: calc(var(--s0) / var(--ratio) + 0.05rem);
     --s0: 1rem;
     --s1: calc(var(--s0) * var(--ratio));   /* 1.25rem */
     --s2: calc(var(--s1) * var(--ratio));   /* 1.56 rem */
@@ -22,7 +23,20 @@
     --s5: calc(var(--s4) * var(--ratio));   /* 3.05 rem */
 
     /* Width */
-    --w: 90ch;
+    --w: 80ch;
+}
+
+/* || Breakpoints */
+@media screen and (width < 480px) {
+    :root {
+        --w: 100%;
+    }
+}
+
+@media screen and (width >= 480px) and (width < 960px) {
+    :root {
+        --w: min(100%, 72ch);
+    }
 }
 
 /* || Defaults */

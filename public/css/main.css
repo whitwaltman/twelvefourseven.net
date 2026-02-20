@@ -1,6 +1,5 @@
 /* || Layout */
-body > header, body > footer {
-    flex: 0 0 auto;
+body > header, body > main, body > footer {
     padding: var(--s1) var(--s0); /* 1.25rem 1rem */
 
     .content {
@@ -10,11 +9,11 @@ body > header, body > footer {
 }
 
 body > header {
+    flex: 0 0 auto;
     margin-block: 0 var(--s2);
 
     .content {
         justify-content: space-between;
-        font-size: calc(var(--s4)/3);
     }
 
     .title h1 {
@@ -24,6 +23,8 @@ body > header {
 
     .subtitle {
         font-style: italic;
+        font-size: var(--sx);
+        font-weight: 300;
     }
 
     a {
@@ -42,15 +43,30 @@ body > header {
     }
 }
 
-body > footer {
-    background: var(--bg-dark);
-}
-
 body > main {
     flex-grow: 1;
-    width: var(--w);
-    margin-inline: auto;
-    padding-inline: var(--s0);
+}
+
+body > footer {
+    flex: 0 0 auto;
+    background: var(--bg-dark);
+    color: var(--text-light);
+
+    .more {
+        font-weight: 300;
+        font-size: var(--sx);
+        justify-content: space-between;
+        gap: calc(var(--s0)/3);
+    }
+
+    a {
+        color: var(--text-white);
+        font-weight: 600;
+    }
+
+    a:hover {
+        color: var(--color-primary);
+    }
 }
 
 body table {
@@ -71,35 +87,10 @@ table td {
 }
 
 td time {
-    font-size: calc(var(--s2)/2);
+    font-size: var(--sx);
 }
 
-body > footer {
-    
-
-    * {
-        color: var(--text-light);
-    }
-
-    a {
-        color: var(--text-white);
-        font-weight: 600;
-    }
-
-    a:hover {
-        color: var(--color-primary);
-    }
-
-    .more {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: calc(var(--s0)/3);
-    }
-}
-
-/* || Asides */
+/* || Note containers */
 body.js-enabled { counter-reset: fn; }
 .js-enabled .note-toggle {
     cursor: pointer;
