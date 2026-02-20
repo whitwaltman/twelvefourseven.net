@@ -9,6 +9,7 @@
     flex-wrap: wrap;
 }
 
+/* || Asides */
 body.js-enabled { counter-reset: fn; }
 .js-enabled .note-toggle {
     cursor: pointer;
@@ -23,13 +24,19 @@ body.js-enabled { counter-reset: fn; }
     display: none;
 }
 
+.note-toggle[aria-expanded="true"] .note::selection {
+    background: var(--color-accent);
+}
+
 .note-toggle[aria-expanded="true"] .note {
     display: inline;
     font-style: italic;
+    color: var(--text-dark);
 }
 
 .note-toggle {
     display: inline;
+    color: var(--text-gray);
 }
 
 .note-toggle:focus {

@@ -27,12 +27,12 @@
 }
 
 /* || Defaults */
-::selection, ::moz-selection {
+::selection {
     background: var(--color-highlight);
     color: var(--text-dark);
 }
 
-a::selection, a::moz-selection {
+a::selection {
     background: var(--color-primary);
 }
 
@@ -79,6 +79,12 @@ h2 {
     padding-block: 0 var(--s0);
 }
 
+h3 {
+    font-size: var(--s2);
+    font-weight: 600;
+    padding-block: 0 var(--s0);
+}
+
 /* || Layout */
 body > header {
     flex: 0 0 auto;
@@ -106,8 +112,7 @@ body > header {
 
 body > main {
     flex-grow: 1;
-    max-width: 70ch;
-    /* margin-inline: auto; */
+    max-width: 72ch;
     padding-inline: var(--s0);
 }
 
