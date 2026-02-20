@@ -61,7 +61,7 @@ body > footer {
 
     a {
         color: var(--text-white);
-        font-weight: 600;
+        font-weight: 500;
     }
 
     a:hover {
@@ -112,7 +112,8 @@ body.js-enabled { counter-reset: fn; }
 .note-toggle[aria-expanded="true"] .note {
     display: inline;
     font-style: italic;
-    color: var(--text-dark);
+    color: var(--text-notes);
+    font-weight: 300;
 }
 
 .note-toggle {

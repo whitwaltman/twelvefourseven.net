@@ -1,6 +1,6 @@
 /* || Custom variables */
 :root {
-    --bg-light: rgba(211, 211, 211, 0.3);
+    --bg-light: rgba(211, 211, 211, 0.1);
     --bg-dark: #121212;
 
     --color-primary: rgba(64, 201, 255, 0.97);
@@ -11,6 +11,7 @@
     --text-white: hsla(0, 0%, 100%, 0.7);
     --text-light: hsla(0, 0%, 100%, 0.4);
     --text-gray: rgb(170, 170, 170);
+    --text-notes: rgb(112, 125, 137);
 
     /* Scale */
     --ratio: 1.25;
@@ -29,12 +30,16 @@
 /* || Breakpoints */
 @media screen and (width < 480px) {
     :root {
+        --ratio: 1.15;
+        --sx: 0.85rem;
         --w: 100%;
     }
 }
 
 @media screen and (width >= 480px) and (width < 960px) {
     :root {
+        --ratio: 1.2;
+        --sx: 0.85rem;
         --w: min(100%, 72ch);
     }
 }
@@ -99,6 +104,10 @@ h3 {
 }
 
 /* || Element spacing */
+main {
+    margin-bottom: var(--s5);
+}
+
 article > * + * {
     margin-top: var(--s3, 1.5rem);
 }
@@ -109,6 +118,7 @@ article > * + h3 {
 
 article {
     padding-block: 0 var(--s8);
+    margin-bottom: var(--s5);
 }
 
 ul, ol {
@@ -120,7 +130,11 @@ p + p {
 }
 
 p + :not(p) {
-    margin-top: var(--s4, 2.5rem);
+    margin-top: var(--s3, 2rem);
+}
+
+:not(p) + p {
+    margin-top: var(--s3, 2rem);
 }
 
 /* || Utility classes */
