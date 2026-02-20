@@ -10,7 +10,7 @@ Recently, my girlfriend and I were talking about GDPs and national debts. Intere
 
 Of course, personal debt and institutional/governmental debt are very different things. And that distinction is actually where our conversation got really interesting. It would be an actively terrible thing if the United States were to have its debts wiped out completely, say, tomorrow morning.
 
-...blah blah more stuff about national debt
+* * *
 
 Also interesting is the relative values (gdp to debt ratio, debt as percentage of national economy, etc.)
 

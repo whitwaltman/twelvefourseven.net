@@ -130,3 +130,9 @@ body.js-enabled { counter-reset: fn; }
     outline-offset: 2px;
     border-radius: 2px;
 }
+
+/* || Other */
+.metadata {
+    font-size: var(--sx);
+    font-style: italic;
+}
