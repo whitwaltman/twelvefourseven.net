@@ -1,5 +1,9 @@
-<p>Hi, I'm Whit Waltman. I'm a wordplay fanatic, an avid kayaker, and a fan of stop-motion animation, among other things.</p>
-<p>Feel free to peruse my notes, but be warned that they're still in the early stages.</p>
+<p>Hi, I'm Whit Waltman. This is one of my many notebooks. I take notes to help me think better.</p>
+<p>
+    This notebook is relatively new, so it'll take some time for its shape and form to settle in.
+    Feel free to browse around in the meantime, and if any of the stuff here strikes a chord with you,
+    <span class="contact" id="js">let me know:</span> <span class="contact" id="no-js"><span class="blockspam" aria-hidden="true">PLEASE GO AWAY!</span> whitwaltman@<!-- sdfjsdhfkjypcs -->mailbox.org</span>
+</p>
 <h2>Table of contents</h2>
 <table class="toc">
     <thead>
@@ -21,3 +25,15 @@
         {% endfor %}
     </tbody>
 </table>
+<script>
+    const e = "d2hpdHdhbHRtYW5AbWFpbGJveC5vcmc=";
+    const target = document.querySelector(".contact#js");
+    const text = target.innerHTML.slice(0, -1);
+    target.innerHTML = "";
+    const link = document.createElement("a");
+    link.textContent = text;
+    link.setAttribute("href", "mailto:".concat(atob(e)));
+    target.appendChild(link);
+    const remove = document.querySelector(".contact#no-js");
+    remove.style.display = "none";
+</script>

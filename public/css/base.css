@@ -135,3 +135,7 @@ p + :not(p) {
     display: flex;
     flex-direction: column;
 }
+
+.blockspam {
+    display: none;
+}
