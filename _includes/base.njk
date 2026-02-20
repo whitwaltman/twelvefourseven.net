@@ -3,6 +3,8 @@ layout: html.njk
 ---
 {% include "header.njk" %}
 <main>
-    {{ content | safe }}
+    <div class="content">
+        {{ content | safe }}
+    </div>
 </main>
 {% include "footer.njk" %}
