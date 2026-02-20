@@ -4,7 +4,7 @@ type: working note
 date: '2026-02-08T12:00:00Z'
 ---
 
-The idea of credit cards seems kind of silly to me. Intellectually, I understand why they exist and the societal function they provide, but the way the credit system works has always seemed like an unnatural game adults that are forced to play.
+The idea of credit cards have always seemed kind of silly to me. Intellectually, I understand why they exist and the societal function they provide, but the way the credit system works has always seemed like an unnatural game adults that are forced to play.
 
 Recently, my girlfriend and I were talking about GDPs and national debts. Interestingly, Liechtenstein is one of the few (if not the only?) countries without *any national debt*. In fact, they have pretty substantial cash reserves available. But this is only possible because Liechtenstein is (no offense) not a major global power.
 

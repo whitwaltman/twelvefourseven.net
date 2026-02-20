@@ -94,6 +94,10 @@ body > header {
         letter-spacing: -2px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
+
+    span {
+        font-style: italic;
+    }
 }
 
 body > main {

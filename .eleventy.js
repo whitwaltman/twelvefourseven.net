@@ -43,6 +43,11 @@ export default async function (config) {
 		return yaml.load(contents);
 	});
 
+	// Create posts collection
+	config.addCollection("posts", (collection) => {
+        return collection.getFilteredByGlob("src/**/*.md");
+    });
+
 	// Specify server port
 	config.setServerOptions({ port: 1002 });
 
