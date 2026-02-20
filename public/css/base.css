@@ -11,7 +11,7 @@
     --text-dark: rgba(0, 0, 0, 0.7);
     --text-white: hsla(0, 0%, 100%, 0.7);
     --text-light: hsla(0, 0%, 100%, 0.4);
-    --text-gray: rgb(180, 180, 180);
+    --text-gray: rgb(170, 170, 170);
 
     /* Scale */
     --ratio: 1.25;
@@ -90,6 +90,21 @@ body > header {
     flex: 0 0 auto;
     padding-block: var(--s1);
     padding-inline: var(--s0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: calc(var(--s3)/2);
+
+    div.right {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    div.right a {
+        font-weight: 600;
+    }
 
     a {
         color: var(--text-gray);
@@ -172,5 +187,9 @@ ul, ol {
 }
 
 p + p {
-    margin-top: var(--s3, 1.5rem);
+    margin-top: var(--s1, 1.25rem);
+}
+
+p + :not(p) {
+    margin-top: var(--s4, 2.5rem);
 }
