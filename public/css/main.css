@@ -1,15 +1,3 @@
-.toc a:hover {
-    background: var(--color-accent);
-}
-
-.footer_content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: calc(var(--s0)/3);
-}
-
 /* || Asides */
 body.js-enabled { counter-reset: fn; }
 .js-enabled .note-toggle {
