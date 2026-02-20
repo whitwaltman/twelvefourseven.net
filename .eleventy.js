@@ -48,6 +48,12 @@ export default async function (config) {
         return collection.getFilteredByGlob("src/**/*.md");
     });
 
+	// Add shortcode
+	config.addShortcode('aside', (text) => `
+		<span class="note-toggle" role="button" tabindex="0" aria-expanded="false" aria-label="Toggle note"><span class="note">${text}</span></span>
+	`
+	);
+
 	// Specify server port
 	config.setServerOptions({ port: 1002 });
 

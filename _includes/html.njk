@@ -30,5 +30,25 @@
 </head>
 <body>
     {{ content | safe }}
+    <script>
+        document.body.classList.add("js-enabled");
+
+        const tggls = document.querySelectorAll(".note-toggle");
+
+        const toggleNote = (el) => {
+            const isExpanded = el.getAttribute("aria-expanded") === "true";
+            el.setAttribute("aria-expanded", !isExpanded);
+        }
+
+        tggls.forEach((el) => {
+            el.addEventListener("click", () => toggleNote(el));
+            el.addEventListener("keydown", (e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    toggleNote(el);
+                }
+            });
+        });
+    </script>
 </body>
 </html>

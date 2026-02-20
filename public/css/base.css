@@ -27,9 +27,13 @@
 }
 
 /* || Defaults */
-::selection {
+::selection, ::moz-selection {
     background: var(--color-highlight);
     color: var(--text-dark);
+}
+
+a::selection, a::moz-selection {
+    background: var(--color-primary);
 }
 
 *, *::before, *::after {
