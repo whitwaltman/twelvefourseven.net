@@ -2,6 +2,9 @@ const filters = {
 	fmtDate: (dateObj) => {
 		return dateObj.toDateString();
 	},
+	mkDate: (dateStr) => {
+		return new Date(dateStr);
+	},
 	fmtTime: (dateObj) => {
 		return dateObj.toLocaleTimeString("en-US", { timeZone: "UTC" });
 	},

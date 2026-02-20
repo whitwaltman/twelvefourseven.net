@@ -1,10 +1,23 @@
 <h2>Table of contents</h2>
-<ul class="toc">
-{% for post in collections.posts %}
-    <li>
-        <a href="{{ post.url }}">{{ post.data.title | default(post.fileSlug) }}</a>
-    </li>
-{% endfor %}
-</ul>
+<table class="toc">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Created</th>
+            <th>Updated</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for post in collections.posts %}
+        <tr>
+            <td><a href="{{ post.url }}">{{ post.data.title | default(post.fileSlug) }}</a></td>
+            <td>{{ post.data.date | mkDate | fmtDate }}</td>
+            {% if post.data.updated %}
+            <td>{{ post.data.updated | fmtDate }}</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 
 <img src="/img/me.jpg" alt="pic of me"/>

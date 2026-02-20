@@ -116,6 +116,19 @@ body > main {
     padding-inline: var(--s0);
 }
 
+body table {
+    max-width: 90ch;
+    margin-bottom: var(--s2);
+}
+
+table th {
+    text-align: left;
+}
+
+table td {
+    padding-right: 4ch;
+}
+
 body > footer {
     flex: 0 0 auto;
     background: var(--bg-dark);

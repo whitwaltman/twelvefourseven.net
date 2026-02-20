@@ -1,5 +1,5 @@
 ---
-date: '2026-02-20T12:00:00Z'
+date: '2026-02-19T12:00:00Z'
 ---
 I often think about digital identity. The topic does interest me, but mostly I think about it from the perspective of self-preservation.
 
