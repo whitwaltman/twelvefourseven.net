@@ -129,6 +129,10 @@ table td {
     padding-right: 4ch;
 }
 
+td time {
+    font-size: calc(var(--s2)/2);
+}
+
 body > footer {
     flex: 0 0 auto;
     background: var(--bg-dark);
