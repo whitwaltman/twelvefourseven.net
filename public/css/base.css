@@ -140,3 +140,7 @@ article {
 ul, ol {
     padding-block: 0 var(--s2);
 }
+
+p + p {
+    margin-top: var(--s3, 1.5rem);
+}
