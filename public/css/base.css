@@ -20,9 +20,6 @@
     --s3: calc(var(--s2) * var(--ratio));   /* 1.95 rem */
     --s4: calc(var(--s3) * var(--ratio));   /* 2.44 rem */
     --s5: calc(var(--s4) * var(--ratio));   /* 3.05 rem */
-    --s6: calc(var(--s5) * var(--ratio));
-    --s7: calc(var(--s6) * var(--ratio));
-    --s8: calc(var(--s7) * var(--ratio));
 
     /* Width */
     --w: 90ch;
@@ -110,4 +107,17 @@ p + p {
 
 p + :not(p) {
     margin-top: var(--s4, 2.5rem);
+}
+
+/* || Utility classes */
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
 }
