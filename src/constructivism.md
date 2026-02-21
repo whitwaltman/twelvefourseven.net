@@ -11,3 +11,6 @@ I like the idea of instructional scaffolding and am also interested in going dee
 * * *
 
 I need to revisit Michael Nielsen's [Augmenting Long-term Memory](https://augmentingcognition.com/ltm.html). While it isn't directly related to or about constructivism, it holds a lot of interesting ideas and nods to constructivist ideas in talking about memory and learning.
+
+* * *
+
