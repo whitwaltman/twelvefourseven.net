@@ -2,7 +2,10 @@ export default {
     layout: "note.njk",
     // https://www.11ty.dev/docs/data-computed/
     eleventyComputed: {
-        permalink: (data) => `/${data.page.fileSlug}/`,
+        permalink: (data) => {
+            // if (data.draft) return false;
+            return `/${data.page.fileSlug}/`;
+        },
         title: (data) => {
             if (data.title) return data.title;
             const slug = data.page.fileSlug.split("-").join(" ");

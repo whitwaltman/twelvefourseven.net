@@ -45,7 +45,8 @@ export default async function (config) {
 
 	// Create posts collection
 	config.addCollection("posts", (collection) => {
-        return collection.getFilteredByGlob("src/**/*.md");
+        const all = collection.getFilteredByGlob("src/**/*.md");
+		return all.filter((post) => !post.data.draft);
     });
 
 	// Add shortcode
