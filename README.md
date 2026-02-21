@@ -4,6 +4,14 @@ This is the repository for my personal website. It's built using Eleventy, a sta
 
 This document is mostly written for my future self, to remind me of things I may have forgotten.
 
+## draft posts
+
+Draft posts are supported. To mark a post as a draft, add `draft: true` to the front-matter. This will automatically exclude it from `collections.posts`. 
+
+Depending on the node environment, draft posts may or may not have their files generated. In `src/src.11tydata.js`, the function that computes the `permalink` also checks if it's a production build, and if so, it skips generating the file.
+
+If it's not in production mode, the draft post file will be generated, but it won't be listed with the other posts in the table of contents.
+
 ## versioning
 
 I try my best to use git tags to "track" non-trivial updates and version history. As of February 9, 2026, I'm on `v1.0.4`.

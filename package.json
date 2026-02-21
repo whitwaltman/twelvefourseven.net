@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": ".eleventy.js",
   "scripts": {
-    "build": "npx eleventy",
+    "build": "NODE_ENV=production npx eleventy",
     "build:all": "npm run clean && npm run build && npm run format",
     "clean": "rm -rf _site",
     "dates": "node _utils/backfill.js",

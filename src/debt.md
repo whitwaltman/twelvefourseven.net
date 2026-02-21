@@ -1,5 +1,6 @@
 ---
 title: The function of debt
+draft: true
 type: working note
 date: '2026-02-08T12:00:00Z'
 ---

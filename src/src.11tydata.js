@@ -1,9 +1,11 @@
+const isProduction = process.env.NODE_ENV === "production";
+
 export default {
     layout: "note.njk",
     // https://www.11ty.dev/docs/data-computed/
     eleventyComputed: {
         permalink: (data) => {
-            // if (data.draft) return false;
+            if (isProduction && data.draft) return false;
             return `/${data.page.fileSlug}/`;
         },
         title: (data) => {
