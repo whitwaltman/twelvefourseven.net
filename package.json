@@ -12,14 +12,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "start": "npm run dates && npx eleventy --serve --incremental",
-    "serve": "npx eleventy --serve --incremental",
-    "prepare": "husky"
-  },
-  "lint-staged": {
-    "src/**/*.md": [
-      "node _utils/updated.js",
-      "git add _data/gitUpdated.json"
-    ]
+    "serve": "npx eleventy --serve --incremental"
   },
   "keywords": [],
   "author": "whitwaltman",
@@ -30,8 +23,7 @@
     "origin": "git@github.alt:whitwaltman/twelvefourseven.net.git"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.1.0",
-    "husky": "^9.1.7"
+    "@11ty/eleventy": "^3.1.0"
   },
   "devDependencies": {
     "@11ty/eleventy-img": "^6.0.4",
