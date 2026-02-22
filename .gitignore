@@ -9,7 +9,6 @@ npm-debug.*
 
 # node stuff
 node_modules/
-.husky/
 
 # output
 _site
