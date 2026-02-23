@@ -2,12 +2,13 @@ import { defineCollection } from 'astro:content';
 import { glob, file } from 'astro/loaders';
 import { z } from 'astro/zod';
 
-const college = defineCollection({
-    loader: glob({ pattern: "**/*.md", base: "./college" }),
+const notes = defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./notes" }),
     schema: z.object({
         title: z.string(),
-        course: z.number(),
+        date: z.coerce.date(),
+        updated: z.coerce.date().optional(),
     })
 });
 
-export const collections = { college };
+export const collections = { notes };
