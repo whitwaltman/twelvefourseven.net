@@ -1,0 +1,15 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('garden')).sort(
+    (a, b) => b.data.planted.valueOf() - a.data.planted.valueOf(),
+);
+---
+
+<h1>Garden</h1>
+
+<ul>
+    {posts.map(post => (
+        <li><a href={`/${post.id}`}>{post.data.title}</a></li>
+    ))}
+</ul>

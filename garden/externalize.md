@@ -1,7 +1,8 @@
 ---
 title: Externalize your thinking
-type:
-stage:
+type: note
+stage: seedling
+planted: 2026-02-25
 ---
 
 Latent strength -> career leverage

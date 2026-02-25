@@ -1,0 +1,2 @@
+- philosophy for dummies
+- elaborative encoding

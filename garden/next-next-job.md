@@ -1,7 +1,8 @@
 ---
 title: Your next next job
-type:
-stage:
+type: note
+stage: seedling
+planted: 2026-02-25
 ---
 
 > What do you want to be your next next job? And why can't you get it right now?

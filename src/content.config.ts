@@ -1,14 +1,17 @@
 import { defineCollection } from 'astro:content';
-import { glob, file } from 'astro/loaders';
+// glob loader creates entries from dirs, file loader creates multiple entries from a single file
+import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
-const notes = defineCollection({
-    loader: glob({ pattern: "**/*.md", base: "./notes" }),
+const garden = defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./garden" }),
     schema: z.object({
         title: z.string(),
-        date: z.coerce.date(),
-        updated: z.coerce.date().optional(),
+        type: z.string(),
+        stage: z.string(),
+        planted: z.coerce.date(),
+        watered: z.coerce.date().optional(),
     })
 });
 
-export const collections = { notes };
+export const collections = { garden };

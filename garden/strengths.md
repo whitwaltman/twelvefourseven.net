@@ -1,7 +1,8 @@
 ---
 title: Strengths
-type:
-stage:
+type: note
+stage: seedling
+planted: 2026-02-25
 ---
 
 > Where do I create disproportionate value relative to effort?
