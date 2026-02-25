@@ -4,7 +4,7 @@ import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 const garden = defineCollection({
-    loader: glob({ pattern: "**/*.md", base: "./garden" }),
+    loader: glob({ pattern: ["**/*.md", "**/*.mdx"], base: "./garden" }),
     schema: z.object({
         title: z.string(),
         type: z.string(),
