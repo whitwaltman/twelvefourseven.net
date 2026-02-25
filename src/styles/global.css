@@ -1,8 +1,17 @@
 :root {
-    --color-primary: #F54927;
-    --color-secondary: #27D3F5;
-    --color-tertiary: #D3F527;
-    --color-quaternary: #4927F5;
+    --green-50: #EDF7ED;
+    --green-100: #DBEFDB;
+    --green-200: #C8E8C9;
+    --green-300: #B6E0B7;
+    --green-400: #A4D8A6;
+    --green-500: #91D095;
+    --green-600: #7DC783;
+    --green-700: #68BF72;
+    --green-800: #52B761;
+    --green-900: #37AF50;
+    --green: #00a63e;
+    --blue: #0069A6;
+    --brown: #A63D00;
 }
 
 *, *::before, *::after {
@@ -14,6 +23,7 @@ html, body {
     scroll-behavior: smooth;
     overscroll-behavior-y: none;
     overflow-y: auto;
+    background: var(--green-300);
 }
 
 body {

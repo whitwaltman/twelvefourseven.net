@@ -14,10 +14,12 @@ const { pageTitle } = Astro.props;
 	</head>
 	<body>
 		<header>
-            <a href="/">twelvefourseven.net</a>
-            <h1>{pageTitle}</h1>
+			<a href="/">
+				<img src="/text.svg"/>
+			</a>
         </header>
         <main>
+			<h1>{pageTitle}</h1>
             <slot />
         </main>
         <footer>
