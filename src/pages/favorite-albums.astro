@@ -1,16 +1,18 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const albums = await getCollection("albums");
 ---
 
-Note that this doesn't include soundtracks!
-
 <BaseLayout pageTitle="Favorite albums">
+    Note that this doesn't include soundtracks!
     {albums.map((album) => (
-        <div>
-
+        <div data-album={album.id}>
+            <span>Title: {album.data.title}</span>
+            <span>Artist: {album.data.artist}</span>
+            <span>Released: {album.data.release}</span>
+            <span>Length: {album.data.length} minutes</span>
         </div>
     ))}
 </BaseLayout>

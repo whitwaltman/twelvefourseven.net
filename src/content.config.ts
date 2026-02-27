@@ -16,9 +16,9 @@ type Album = z.infer<typeof albumSchema>;
 
 const albums = defineCollection({
     loader: async () => {
-        return favoriteAlbums.map((album: Album) => ({
-            id: album.id,
-            ...album
+        return favoriteAlbums.map(({ id, ...rest }: Album) => ({
+            id: id,
+            ...rest
         }));
     },
     schema: albumSchema
