@@ -32,6 +32,7 @@ const garden = defineCollection({
         stage: z.enum(["seedling", "budding", "evergreen"]).optional(),
         planted: z.coerce.date(),
         watered: z.coerce.date().optional(),
+        related: z.array(z.string()).optional(),
     })
 });
 
