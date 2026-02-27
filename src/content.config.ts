@@ -28,8 +28,8 @@ const garden = defineCollection({
     loader: glob({ pattern: ["**/*.md", "**/*.mdx"], base: "./garden" }),
     schema: z.object({
         title: z.string(),
-        type: z.string(),
-        stage: z.string(),
+        type: z.enum(["note", "essay", "collection"]),
+        stage: z.enum(["seedling", "budding", "evergreen"]).optional(),
         planted: z.coerce.date(),
         watered: z.coerce.date().optional(),
     })

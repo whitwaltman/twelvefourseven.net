@@ -2,12 +2,16 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+const dupes = ['favorite-albums'];
+
 export async function getStaticPaths() {
     const posts = await getCollection('garden');
-    return posts.map(post => ({
-        params: { id: post.id },
-        props: { post },
-    }));
+    return posts
+        .filter(post => !dupes.includes(post.id))
+        .map(post => ({
+            params: { id: post.id },
+            props: { post },
+        }));
 }
 
 const { post } = Astro.props;
