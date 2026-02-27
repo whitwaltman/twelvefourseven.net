@@ -1,8 +1,12 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "Home"
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Link from '../components/Link.astro';
+const pageTitle = 'Home'
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <h2>Welcome to my website</h2>
+    <p>Hi, I'm Whit Waltman.</p>
+    <p>... Okay, that's not my actual name. But it's one I <Link href={"/names-as-technologies"}>feel at home in</Link>.
+        It's a <Link href={"https://en.wikipedia.org/wiki/Spoonerism"}>spoonerism</Link> of the name of <Link href={"https://en.wikipedia.org/wiki/Walt_Whitman"}>an American poet</Link>.
+    </p>
 </BaseLayout>
